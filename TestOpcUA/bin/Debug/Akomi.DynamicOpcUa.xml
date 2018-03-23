@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Akomi.DynamicOpcUa</name>
+    </assembly>
+    <members>
+        <member name="T:Akomi.DynamicOpcUa.AppConfigChanger">
+            <summary>
+            Mithilfe dieser Klasse kann die Configuration der Application dynamisch verändert werden
+            Source: http://stackoverflow.com/questions/6150644/change-default-app-config-at-runtime
+            
+            Dies ist notwendig, um den OPC-Ua Server zu starten
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.AppConfigChanger.ChangeAppConfig.FindConfigFile(System.String,System.Boolean)">
+            <summary>
+            Führt folgende Versuche durch, um die erwartete Datei zu suchen
+            </summary>
+            <param name="expectedAppConfigPath"></param>
+            <param name="userSearchActive">Öffnet einen OpenFileDialog um die Datei zu suchen</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.AppConfigChanger.ChangeAppConfig.SearchFileByUser(System.String@)">
+            <summary>
+            Returns "true" if FileSearch was successful, "false" if not
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.PropertyInspector.StreamMemberInspector.GetProperties(System.Object,System.Reflection.BindingFlags,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Gets all Properties from a Class
+            </summary>
+            <param name="obj">Object which is searched</param>
+            <param name="bindingFlags"></param>
+            <returns>List of <see cref="T:System.Reflection.PropertyInfo"/></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.PropertyInspector.StreamMemberInspector.GetFields(System.Object,System.Reflection.BindingFlags,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Gets all Properties from a Class
+            </summary>
+            <param name="obj">Object which is searched</param>
+            <param name="bindingFlags"></param>
+            <returns>List of <see cref="T:System.Reflection.PropertyInfo"/></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.PropertyInspector.GenericFieldInspector.GetFields(System.Object,System.Reflection.BindingFlags,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Gets all Properties from a Class
+            </summary>
+            <param name="obj">Object which is searched</param>
+            <param name="bindingFlags"></param>
+            <returns>List of <see cref="T:System.Reflection.PropertyInfo"/></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.PropertyInspector.GenericPropertyInspector.GetProperties(System.Object,System.Reflection.BindingFlags,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Gets all Properties from a Class
+            </summary>
+            <param name="obj">Object which is searched</param>
+            <param name="bindingFlags"></param>
+            <returns>List of <see cref="T:System.Reflection.PropertyInfo"/></returns>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.NodeIdGenerator">
+            <summary>
+            Helper Class to get a system wide unique Node Identification. (Singleton Pattern)
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeIdGenerator.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeIdGenerator.CreateNewNodeId">
+            <summary>
+            Creates a unique NodeID in the server address space
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.OpcUaServer">
+            <summary>
+            Main Class to Start the AKOMI Server 
+            todo: Enums Werden noch nicht richtig angezeigt auf dem Sever
+            
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.OpcUaServer.ExceptionThrown">
+            <summary>
+            todo: implement this event
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.OpcUaServer.NodeCountChanged">
+            <summary>
+            This event is fired when a new node is created.
+            Eventargs contains the new count of the nodes
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.OpcUaServer.MethodCountChanged">
+            <summary>
+            This event is fired when a new method is created.
+            Eventargs contains the new count of the methods.
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.OpcUaServer.VariableCountChanged">
+            <summary>
+            This event is fired when a new variable is created.
+            Eventargs contains the new count of the variables.
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaServer.NodeCount">
+            <summary>
+            The count of the nodes being published in the server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaServer.MethodCount">
+            <summary>
+            The count of the methods being published in the server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaServer.VariableCount">
+            <summary>
+            The count of the variables being published in the server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaServer.Ports">
+            <summary>
+            The configured Ports. Do not confuse with the ports actually being in use. 
+            They might be different.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.StartServer(System.Object,Akomi.DynamicOpcUa.OpcUaStartupParameters,UnifiedAutomation.UaSchema.SecuredApplication)">
+            <summary>
+            Starts the AKOMI OPC UA Server.
+            </summary>
+            <param name="classToLinkWithServer">Class that will be published by the server</param>
+            <param name="parameters">Class with optional startup parameters</param>
+            <param name="serverConfiguration"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.ExtractDll(System.String)">
+            <summary>
+            Searches in the Manifest for a resource with name <param name="name"></param>
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.ClosePopupWindow(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="maxTimeToWait">in seconds</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.TimedServerRestart(System.Object,System.EventArgs)">
+            <summary>
+            Asynchronous Method to invoke a restart after time.
+            Duration is specified in <seealso cref="F:Akomi.DynamicOpcUa.OpcUaServer._opcUaStartupParameters"/>
+            </summary>
+            <param name="obj"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.WaitForServerShutdown">
+            <summary>
+            Waits for the Server until it stops running
+            <returns>true if the server stopped successful</returns>
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.WaitForServerShutdown(System.UInt32)">
+            <summary>
+            Waits for the Server until it stops running
+            <returns>true if the server stopped successful</returns>
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.WaitForServerShutdown(System.Boolean)">
+            <summary>
+            Waits for the Server until it stops running
+            <param name="userControlled">If true, a <see cref="T:System.Windows.Forms.MessageBox"/> will appear which stops the calling Algorithm from further execution until the user terminates the <see cref="T:System.Windows.Forms.MessageBox"/>. 
+            Otherwise the Method waits until IsRunning property of the server is false/>
+            </param>
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.WaitForServerStartup">
+            <summary>
+            Waits until the server has started up and runs.
+            </summary>
+            <returns><see cref="M:Akomi.DynamicOpcUa.OpcUaServer.IsServerRunning"/></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServer.WaitForServerStartup(System.UInt32)">
+            <summary>
+            Waits until the server has started up and runs.
+            maximum time is <paramref name="timeout"/> milliseconds. After that period false will be returned, if the server hasn't started up.
+            </summary>
+            <param name="timeout">Timeout in Millisekunden</param>
+            <returns>Gibt false zurück, falls der Server innerhalb der angegeben Zeit nicht läuft, andernfalls true</returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServerConfiguration.ConfigureOpcUaApplicationWithDefaultValues(Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            You cann apply the returned object by call 
+            ApplicationInstance.Default.SetApplicationSettings(returnValue);
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServerConfiguration.SetServerConfiguration(Akomi.DynamicOpcUa.OpcUaStartupParameters,UnifiedAutomation.UaSchema.SecuredApplication,UnifiedAutomation.UaBase.ApplicationInstance)">
+            <summary>
+            Set the appDomainConfiguration i.e. the Server configurateion.
+            The strategy depends on the input parameters 
+            </summary>
+            <param name="parameters"></param>
+            <param name="serverConfiguration">Object which includes all necessary configuration aspects</param>
+            <param name="appInstance"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaServerConfiguration.SetServerConfiguration(UnifiedAutomation.UaBase.ApplicationInstance,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Generates and sets the server configuration programatically
+            </summary>
+            <param name="appInstance"></param>
+            <param name="parameters">Settings for the programatically generated configurations</param>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.OpcUaStartupParameters">
+            <summary>
+            This class holds all needed startup parameters and defines default values.
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.CurrentDepth">
+            <summary>
+            Current depth of recursion
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.MaximumDepth">
+            <summary>
+            Maximum depth of registration rekursion
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.RootNodeName">
+            <summary>
+            Defines the BrowseName of the root node
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.ConfigurationFilePath">
+            <summary>
+            Gives the <see cref="T:System.IO.Path"/> of the .config <see cref="T:System.IO.File"/>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.UserCanSearchForConfigurationFile">
+            <summary>
+            Defines if a <see cref="T:System.Windows.Forms.FileDialog"/> can appear to let the user manually search for a .config file
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.UseToStringForListElements">
+            <summary>
+            When the OPC UA Server publishes list elements, 
+            this option makes them named based on their <see cref="M:Akomi.DynamicOpcUa.OpcUaStartupParameters.ToString(System.Boolean)"/> method.
+            If false, the datatype is used for the naming
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.TryUseAppConfigFile">
+            <summary>
+            Defines if the server tries to use a extern defined app.config
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.Ports">
+            <summary>
+            This is the servers listening port
+            <value>48030</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.ProductName">
+            <summary>
+            The name of the product the server is used for
+            <value>AKOMI</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.ApplicationName">
+            <summary>
+            The visible server name
+            <value>Akomi Server</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.ApplicationUri">
+            <summary>
+            todo: fill
+            <value>urn:localhost:UnifiedAutomation:AKOMIserver</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.BaseAddress">
+            <summary>
+            The ethernet address for the server.
+            Usually the port is contained in <see cref="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.Ports"/>.
+            Default value is localhost
+            <value>opc.tcp://localhost</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.IgnoreNullPointer">
+            <summary>
+            Ignore NullPointerreferences.
+            If set to true, no object referencing null will be registered
+            <value>true</value>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.CreateNewApplicationInstance">
+            <summary>
+            If this is set to false, no new ApplicationInstace of a OpcUa server will be instanciated,
+            insteat <see cref="P:UnifiedAutomation.UaBase.ApplicationInstance.Default"/> instance will be resused.
+            If no new instances are created, there is no possibility to start mutliple servers out of one application process.
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.RestartTimer">
+            <summary>
+            Set this timer to bigger 0 for restart the server after time elapsed.
+            Unit in seconds
+            <example>3400 seconds</example>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.RestartServer">
+            <summary>
+            Invokes Server restart after <see cref="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.RestartTimer"/>
+            Unit in seconds
+            <example>3400 seconds</example>
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.RaisePublishingEvents">
+            <summary>
+            If this is true the server will raise events if any new stuff is registered.
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.HideConsoleOutput">
+            <summary>
+            If true the server won't give Console Ouput
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.EnableAkomiLogger">
+            <summary>
+            If true, the AkomiLogger won't Log any messages
+            todo: implement Akomi Logger
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.DefinedObjectSimplifications">
+            <summary>
+            Types on the key-side of the <see cref="T:System.Collections.Generic.Dictionary`2"/> will be registered as the value-side types in the OpcUa server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.InheritedObjectSimplification">
+            <summary>
+            Simplificates all <see cref="T:System.Object"/>s which inherit one of given types.
+            The order is significant. Earlier elements will be used in a higher priority
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.IgnoreHiddenMethods">
+            <summary>
+            If true Methods (and getter or setter) will be ignored, if they are hidden through 
+            derived Members with a "new"-keyword
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.UseFasterflect">
+            <summary>
+            If true, the opc will use the package Fasterflect for diverse Reflection stuff
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.IgnoreCyclicReferences">
+            <summary>
+            If true, the opc will use the package Fasterflect for diverse Reflection stuff
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.OpcUaStartupParameters.ShowPopupWindow">
+            <summary>
+            If true: AutoIt will try to automatically close the popup window of each session start
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.OpcUaStartupParameters.#ctor">
+            <summary>
+            Default Constructor.
+            This constructor sets all raw informations to be able to start the server by default.
+            </summary>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.OpcUaTypeHelper">
+            <summary>
+            Stores Information about each OPC UA Datatype and its conversion to CLR
+            </summary>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.VariableHandler">
+            <summary>
+            Helper class that stores the Get/Set References of a property. These are called by the SDK when a OPC UA node is read / written.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.VariableHandler.#ctor(System.Func{UnifiedAutomation.UaBase.DataValue},System.Action{UnifiedAutomation.UaBase.DataValue})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="readDelegate">Reference to the read 'function' of a property</param>
+            <param name="writeDelegate">Reference to the write 'function' of a property</param>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.ExpressionBuilder.ObjectWrapper">
+            <summary>
+            Stores reference to any object
+            </summary>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.MyServerManager">
+            <summary>
+            Kopie von Lesson 02 Getting Started / Alex Stark
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.MyServerManager.NodeCount">
+            <summary>
+            The count of the nodes being published in the server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.MyServerManager.MethodCount">
+            <summary>
+            The count of the methods being published in the server
+            </summary>
+        </member>
+        <member name="P:Akomi.DynamicOpcUa.MyServerManager.VariableCount">
+            <summary>
+            The count of the variables being published in the server
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.MyServerManager.OnRootNodeManagerStarted(UnifiedAutomation.UaServer.RootNodeManager)">
+            <summary>
+            Method is called (from SDK) when NodeManager starts up.
+            </summary>
+            <param name="rootNodeManager"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.MyServerManager.LinkObjectToModel(System.Object,Akomi.DynamicOpcUa.OpcUaStartupParameters)">
+            <summary>
+            Creates an internal model of the given entity and automatically creates nodes and callbacks
+            </summary>
+            <param name="entity">The object to register.</param>
+            <param name="parameters">Container with parameters</param>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.NodeManager">
+            <summary>
+            Manages all OPC UA Nodes on the server. 
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.NodeManager.NodeCreated">
+            <summary>
+            This event is raised when a new Node(Folder) is created
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.NodeManager.MethodCreated">
+            <summary>
+            This event is raised when a new Method is registrated
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.NodeManager.VariableCreated">
+            <summary>
+            This event is raised when a new native variable is created
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.Startup">
+            <summary>
+            Called when the node manager is started.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateVariable(UnifiedAutomation.UaBase.NodeId,System.String,Akomi.DynamicOpcUa.OpcUaTypeHelper,System.Func{UnifiedAutomation.UaBase.DataValue},System.Action{UnifiedAutomation.UaBase.DataValue})">
+            <summary>
+            Creates a new variable in the OPC UA server.
+            </summary>
+            <param name="partentId">The partent identifier.</param>
+            <param name="name">The name of the variable.</param>
+            <param name="typeHelper">The datatype.</param>
+            <param name="readDelegate">The function to read the variable, which has to return a DataValue.</param>
+            <param name="writeDelegate">The function to write the variable, which has the have one input parameter: DataValue to set</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateReadOnlyVariable(UnifiedAutomation.UaBase.NodeId,System.String,Akomi.DynamicOpcUa.OpcUaTypeHelper,System.Func{UnifiedAutomation.UaBase.DataValue})">
+            <summary>
+            Creates a new read only variable in the OPC UA server.
+            </summary>
+            <param name="partentId">The partent identifier.</param>
+            <param name="name">The name of the variable.</param>
+            <param name="typeHelper">The datatype.</param>
+            <param name="readDelegate">The function to read the variable, which has to return a DataValue.</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateWriteOnlyVariable(UnifiedAutomation.UaBase.NodeId,System.String,Akomi.DynamicOpcUa.OpcUaTypeHelper,System.Action{UnifiedAutomation.UaBase.DataValue})">
+            <summary>
+            Creates a new read only variable in the OPC UA server.
+            </summary>
+            <param name="partentId">The partent identifier.</param>
+            <param name="name">The name of the variable.</param>
+            <param name="typeHelper">The datatype.</param>
+            <param name="writeDelegate">The function to write the variable, which has to take a DataValue.</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateVariableCore(UnifiedAutomation.UaBase.NodeId,System.String,Akomi.DynamicOpcUa.OpcUaTypeHelper,Akomi.DynamicOpcUa.VariableHandler,System.Byte)">
+            <summary>
+            Core Function to create nodes on the server. This is used by the public creation functions.
+            </summary>
+            <param name="partentId">The partent identifier.</param>
+            <param name="name">The name of the variable.</param>
+            <param name="typeHelper">The datatype.</param>
+            <param name="variableHandler"></param>
+            <param name="accessLevel"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateMethod(UnifiedAutomation.UaBase.NodeId,System.String,System.Collections.Generic.List{UnifiedAutomation.UaBase.Argument},UnifiedAutomation.UaServer.CallMethodEventHandler)">
+            <summary>
+            Creates a method in the OPC UA server.
+            </summary>
+            <param name="parentId">The partent identifier.</param>
+            <param name="name">The name.</param>
+            <param name="inputArguments">The input arguments of the method.</param>
+            <param name="callMethodEventHandler">The call method event handler to call the method.</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.GetMethodDispatcher(UnifiedAutomation.UaServer.RequestContext,UnifiedAutomation.UaServer.MethodHandle)">
+            <summary>
+            Routes methods to the handler given at registration
+            </summary>
+            <param name="context">The request context.</param>
+            <param name="methodHandle">The method handle.</param>
+            <returns>
+            The method dispatcher. null if no handler is available.
+            </returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.CreateFolder(System.String,UnifiedAutomation.UaBase.NodeId)">
+            <summary>
+            Creates a folder-node in the OPC UA Server
+            </summary>
+            <param name="name">Name of the folder.</param>
+            <param name="parentNodeId">ID of the parent node where folder should be inserted</param>
+            <returns>NodeID of the created folder</returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.Read(UnifiedAutomation.UaServer.RequestContext,UnifiedAutomation.UaServer.NodeAttributeHandle,System.String,UnifiedAutomation.UaBase.QualifiedName)">
+            <summary>
+            Reads a variable registered with the OPC UA server.
+            </summary>
+            <param name="context">The request context.</param>
+            <param name="nodeHandle">The node handle.</param>
+            <param name="indexRange">The index range.</param>
+            <param name="dataEncoding">The data encoding.</param>
+            <returns> A value containing an error code if an error occurs. The attribute value otherwise.</returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.Write(UnifiedAutomation.UaServer.RequestContext,UnifiedAutomation.UaServer.NodeAttributeHandle,System.String,UnifiedAutomation.UaBase.DataValue)">
+            <summary>
+            Writes a variable registered with the OPC UA Server (variable was changed by a client).
+            </summary>
+            <param name="context">The request context.</param>
+            <param name="nodeHandle">The node handle.</param>
+            <param name="indexRange">The index range.</param>
+            <param name="value">The data value.</param>
+            <returns> A value containing an error code if an error occurs.</returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.Shutdown">
+            <summary>
+            Called when the node manager is stopped.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.#ctor(UnifiedAutomation.UaServer.ServerManager)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.NodeManager.Dispose(System.Boolean)">
+            <summary>
+            An overrideable version of the Dispose.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Akomi.DynamicOpcUa.ObjectModel">
+            <summary>
+            Object Model is the Link between the OPC UA Server (Manager) and the .Net Object that will be bound to the server.
+            It does all the binding and calls all the methods on the NodeManager to create the nodes.
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.ObjectModel.InvokedObjectRegistration">
+            <summary>
+            This event will be raised, if the opc ua registration procedure comes to a new complex object
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.ObjectModel.FinishedObjectRegistration">
+            <summary>
+            This event will be raise, if the registration of the current complex object has been completed
+            </summary>
+        </member>
+        <member name="E:Akomi.DynamicOpcUa.ObjectModel.CurrentRecursionDepthChanged">
+            <summary>
+            This event will be raisen, when the recursion depth of the registration process changes
+            </summary>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.#ctor(Akomi.DynamicOpcUa.NodeManager)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="nodeManager"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterEntity(System.Object,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Registers a new object at the OPC UA server (under the "Objects" folder).
+            </summary>
+            <param name="objectToRegister">The object to register.</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterEntity(System.Object,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Registers a new object at the OPC UA server (under the "Objects" folder).
+            </summary>
+            <param name="objectToRegister">The object to register.</param>
+            <param name="rootFolderName">Name of the object (== Foldername)</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterEntity(System.Object,System.String,UnifiedAutomation.UaBase.NodeId,System.Collections.Generic.List{System.Object},System.Object,System.Reflection.MemberInfo)">
+            <summary>
+            Registers a new object at the OPC UA server (under the given Parent Node).
+            </summary>
+            <param name="objectToRegister">The object to register.</param>
+            <param name="name">Name of the object (== Foldername)</param>
+            <param name="parentId">ID of parent node</param>
+            <param name="parents"></param>
+            <param name="parentContainer"></param>
+            <param name="memberInfo"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterMethods(System.Object,UnifiedAutomation.UaBase.NodeId,System.Type)">
+            <summary>
+            Registers all methods of the given object at the OPC UA Server. 
+            </summary>
+            <param name="objectToRegister">The object to register.</param>
+            <param name="parentNodeId"></param>
+            <param name="typeToRegister"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterFieldsAndProperties(System.Object,UnifiedAutomation.UaBase.NodeId,System.Collections.Generic.List{System.Object},System.Type)">
+            <summary>
+            Registers all properties of the given object at the OPC UA Server. Sub-Classes are created as folders an searched through properties from standard datatypes.
+            </summary>
+            <param name="objectToRegister">The object to register.</param>
+            <param name="parentNodeId">NodeId of the parent node where new properties are inserted</param>
+            <param name="typeToRegister">Only Members of this type will be registered</param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterPrimitiveObject(System.Object,System.String,UnifiedAutomation.UaBase.NodeId,System.Object,System.Reflection.MemberInfo,System.Type)">
+            <summary>
+            Registers a Primitive Object, which has to be contained in _opcTypeMapping
+            </summary>
+            <param name="objectToRegister"></param>
+            <param name="name"></param>
+            <param name="parentNodeId"></param>
+            <param name="parentContainer"></param>
+            <param name="memberInfo"></param>
+            <param name="typeToRegister"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.CreateGetDelegate(System.Object,System.Object,System.Reflection.MemberInfo)">
+            <summary>
+            Creates a Read delegate to read a member from containingObject
+            </summary>
+            <param name="containingObject">Object wich contains the member</param>
+            <param name="obj">Value wich shall be read</param>
+            <param name="memberInfo">Informations about the member</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.CreateSetDelegate(System.Object,System.Object,System.Reflection.MemberInfo)">
+            <summary>
+            Creates a Read delegate to read a member from containingObject
+            </summary>
+            <param name="containingObject">Object wich contains the member</param>
+            <param name="obj">Value wich shall be read</param>
+            <param name="memberInfo">Informations about the member</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.IsPrimitiveDataType(System.Object)">
+            <summary>
+            Tests, if the give object is a primitive OpcUa Type
+            </summary>
+            <param name="instance">Object of interest</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.IsPrimitiveDataType(System.Type)">
+            <summary>
+            Tests if the given type is a primitive OpcUa Type
+            </summary>
+            <param name="type">Type of interest</param>
+            <returns>true if <see cref="F:Akomi.DynamicOpcUa.ObjectModel._opcTypeMapping"/> contains <paramref name="type"/></returns>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.RegisterEnumerableObject(System.Object,UnifiedAutomation.UaBase.NodeId,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Registers a Enumerable Object, which has to be contained in _opcTypeMapping
+            </summary>
+            <param name="objectToRegister"></param>
+            <param name="parentNodeId"></param>
+        </member>
+        <member name="M:Akomi.DynamicOpcUa.ObjectModel.GetMethodDelegateFromMethodInfo(System.Object,System.Reflection.MethodInfo)">
+            <summary>
+            Gets a delegate for the method mapping from OPC UA to CLR types
+            </summary>
+            <param name="objectToRegister">The object that contains the method.</param>
+            <param name="methodInfo">The method information.</param>
+            <returns>the delegate to register with OPC UA</returns>
+        </member>
+        <member name="F:Akomi.DynamicOpcUa.ObjectModel._propertyInspectors">
+            <summary>
+            Dictionary which gives specifiv PropertyInspectors for given Types
+            </summary>
+        </member>
+        <member name="F:Akomi.DynamicOpcUa.ObjectModel._fieldInspectors">
+            <summary>
+            Dictionary which gives specifiv PropertyInspectors for given Types
+            </summary>
+        </member>
+        <member name="F:Akomi.DynamicOpcUa.ObjectModel._opcTypeMapping">
+            <summary>
+            Conversion Dictionary between .Net Types and OPC UA Attribute Types (All these types work!)
+            Key is used in the NodeManager to distinguish between ComplexTypes (==create Folder) and Primitive Types (==create Attribute, == these ones here!)
+            </summary>
+        </member>
+    </members>
+</doc>

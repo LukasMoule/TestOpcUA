@@ -1,0 +1,76 @@
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.exe.config
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.exe
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.pdb
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.csprojResolveAssemblyReference.cache
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.exe
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.pdb
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.DynamicOpcUa.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.Utilities.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\AutoItX3.Assembly.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Fasterflect.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Tapako.Framework.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Tapako.ObjectMerger.Attributes.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Tapako.ObjectMerger.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaBase.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaClient.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaServer.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.DynamicOpcUa.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.Utilities.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Fasterflect.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.MathNet.Spatial.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Numerics.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.MathNet.Spatial.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Numerics.xml
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.Skills.SkillCatalogueGenerator.exe
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\EPPlus.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\3842522400.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\MH5F.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.Skills.SkillCatalogue.dll
+C:\Users\Lukas Moue\Desktop\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.Skills.SkillCatalogue.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.exe.config
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.exe
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\TestOpcUA.pdb
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.DynamicOpcUa.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.Skills.SkillCatalogue.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.MathNet.Spatial.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.Utilities.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\AutoItX3.Assembly.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\EPPlus.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Fasterflect.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Numerics.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Tapako.Framework.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Tapako.ObjectMerger.Attributes.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Tapako.ObjectMerger.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaBase.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaClient.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\UnifiedAutomation.UaServer.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.InformationModel.Skills.SkillCatalogue.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.MathNet.Spatial.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.Utilities.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Fasterflect.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Numerics.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.csprojResolveAssemblyReference.cache
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.exe
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\obj\Debug\TestOpcUA.pdb
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\MH5F.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Rexroth_3842999898.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Spatial.dll
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\Akomi.DynamicOpcUa.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\MathNet.Spatial.xml
+C:\Users\Lukas Moue\Desktop\SA programming\TestOpcUA\TestOpcUA\bin\Debug\3842522400.dll

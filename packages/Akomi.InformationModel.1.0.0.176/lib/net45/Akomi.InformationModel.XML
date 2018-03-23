@@ -1,0 +1,2709 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Akomi.InformationModel</name>
+    </assembly>
+    <members>
+        <member name="T:Akomi.InformationModel.Attributes.CatalogueSkill">
+            <summary>
+            Official AKOMI Catalogue skills should be marked with this attribute
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Attributes.SkillCatalogueAttribute">
+            <summary>
+            This attribute is used to mark assemblies as containing SkillCatalogues
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Attributes.BoolAttributeBase.DefaultValue">
+            <summary>
+                The Default value is given, if no attached Attribute will be found.
+                A value unequal to the default value will be returned, if just one value in a Attribute collection is unequal to
+                it.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Attributes.Role.All">
+            <summary>
+                Default Value.
+                Stands for both: Configuration and Execution
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Attributes.DoNotGetAtServerStartup">
+            <summary>
+                Use this attribute to ignore the current value of a property at server startup
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Attributes.PreferredPublicClass">
+            <summary>
+                Declare the main driver class with this attribute.
+                So the AKOMI framework will be able to prefer the marked <see cref="T:Akomi.InformationModel.Device.IDevice" /> implementation other public
+                implementations
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.Connection.ComponentPort">
+            <summary>
+                Class defines one port type (which can consist out of Mechanical, Electrical and Communication Stuff)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Connection.ComponentPort.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Connection.ComponentPort.#ctor(System.String,System.String,Akomi.InformationModel.Component.ComponentPort.Electrical,Akomi.InformationModel.Component.ComponentPort.Mechanical,Akomi.InformationModel.Component.ComponentPort.Communication)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="description"></param>
+            <param name="electrical"></param>
+            <param name="mechanical"></param>
+            <param name="communication"></param>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Id">
+            <summary>
+                Id for unique identification of the connetion
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Name">
+            <summary>
+                Name mainly for visualisation purposes
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Description">
+            <summary>
+                Some additional informations.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Mechanical">
+            <summary>
+                Mechanical component of the connection
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Electrical">
+            <summary>
+                Electrical component of the connection
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.Communication">
+            <summary>
+                Communicating or rather informatic component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Connection.ComponentPort.CounterpartPort">
+            <summary>
+            List of Connection. Each Connection consists of two ComponentPorts
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Connection.ComponentPort.ToString">
+            <summary>
+                Makes string from <see cref="T:Akomi.InformationModel.Component.Connection.ComponentPort" /> <see cref="P:Akomi.InformationModel.Component.Connection.ComponentPort.Name" /> and <see cref="P:Akomi.InformationModel.Component.Connection.ComponentPort.Id" />
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.GetEnumerator">
+            <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+            <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+            <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Add(Akomi.InformationModel.Component.Connection.ComponentPort)">
+            <summary>Fügt der <see cref="T:System.Collections.Generic.ICollection`1" /> ein Element hinzu.</summary>
+            <param name="item">Das Objekt, das <see cref="T:System.Collections.Generic.ICollection`1" /> hinzugefügt werden soll.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Add(System.Object)">
+            <summary>Fügt der <see cref="T:System.Collections.IList" /> ein Element hinzu.</summary>
+            <returns>Die Position, an der das neue Element eingefügt wurde, oder -1, um anzugeben, dass das Element nicht in die Auflistung eingefügt wurde.</returns>
+            <param name="value">Das Objekt, das <see cref="T:System.Collections.IList" /> hinzugefügt werden soll.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Contains(System.Object)">
+            <summary>Bestimmt, ob die <see cref="T:System.Collections.IList" /> einen bestimmten Wert enthält.</summary>
+            <returns>true, wenn <see cref="T:System.Object" /> in <see cref="T:System.Collections.IList" /> gefunden wird, andernfalls false.</returns>
+            <param name="value">Das in der <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Clear">
+            <summary>Entfernt alle Elemente aus <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.IndexOf(System.Object)">
+            <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.IList" />.</summary>
+            <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+            <param name="value">Das in der <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Insert(System.Int32,System.Object)">
+            <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.IList" /> ein.</summary>
+            <param name="index">Der nullbasierte Index, an dem <paramref name="value" /> eingefügt werden soll.</param>
+            <param name="value">Das in die <see cref="T:System.Collections.IList" /> einzufügende Objekt.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+            <exception cref="T:System.NullReferenceException">
+            <paramref name="value" /> ist ein NULL-Verweis in <see cref="T:System.Collections.IList" />.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Remove(System.Object)">
+            <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus <see cref="T:System.Collections.IList" />.</summary>
+            <param name="value">Das aus der <see cref="T:System.Collections.IList" /> zu entfernende Objekt.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Contains(Akomi.InformationModel.Component.Connection.ComponentPort)">
+            <summary>Ermittelt, ob die <see cref="T:System.Collections.Generic.ICollection`1" /> einen bestimmten Wert enthält.</summary>
+            <returns>true, wenn sich <paramref name="item" /> in <see cref="T:System.Collections.Generic.ICollection`1" /> befindet, andernfalls false.</returns>
+            <param name="item">Das im <see cref="T:System.Collections.Generic.ICollection`1" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.CopyTo(Akomi.InformationModel.Component.Connection.ComponentPort[],System.Int32)">
+            <summary>Kopiert die Elemente von <see cref="T:System.Collections.Generic.ICollection`1" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+            <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.Generic.ICollection`1" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+            <param name="arrayIndex">Der nullbasierte Index in <paramref name="array" />, an dem das Kopieren beginnt.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array" /> ist null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex" /> ist kleiner als 0.</exception>
+            <exception cref="T:System.ArgumentException">Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.Generic.ICollection`1" /> ist größer als der verfügbare Platz von <paramref name="arrayIndex" /> bis zum Ende des Ziel-<paramref name="array" />.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Remove(Akomi.InformationModel.Component.Connection.ComponentPort)">
+            <summary>Entfernt das erste Vorkommen eines angegebenen Objekts aus der <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <returns>true, wenn das <paramref name="item" /> erfolgreich aus der <see cref="T:System.Collections.Generic.ICollection`1" /> entfernt wurde, andernfalls false. Diese Methode gibt auch dann false zurück, wenn <paramref name="item" /> nicht in der ursprünglichen <see cref="T:System.Collections.Generic.ICollection`1" /> gefunden wurde.</returns>
+            <param name="item">Das aus dem <see cref="T:System.Collections.Generic.ICollection`1" /> zu entfernende Objekt.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.CopyTo(System.Array,System.Int32)">
+            <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+            <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+            <param name="index">Der nullbasierte Index in <paramref name="array" />, an dem das Kopieren beginnt.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array" /> ist null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kleiner als 0.</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="array" /> ist mehrdimensional. - oder -  Die Anzahl der Elemente in der Quelle <see cref="T:System.Collections.ICollection" /> ist größer als der verfügbare Speicherplatz ab <paramref name="index" /> bis zum Ende des <paramref name="array" />, das als Ziel festgelegt wurde. - oder - Der Typ der Quell-<see cref="T:System.Collections.ICollection" /> kann nicht automatisch in den Typ des Ziel-<paramref name="array" /> umgewandelt werden.</exception>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.Count">
+            <summary>Ruft die Anzahl der Elemente ab, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</summary>
+            <returns>Die Anzahl der Elemente, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.SyncRoot">
+            <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+            <returns>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.IsSynchronized">
+            <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+            <returns>true, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls false.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.IsReadOnly">
+            <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+            <returns>true, wenn das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls false.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.IsFixedSize">
+            <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Collections.IList" /> eine feste Größe hat.</summary>
+            <returns>true, wenn <see cref="T:System.Collections.IList" /> eine feste Größe hat, andernfalls false.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.IndexOf(Akomi.InformationModel.Component.Connection.ComponentPort)">
+            <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.Generic.IList`1" />.</summary>
+            <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+            <param name="item">Das im <see cref="T:System.Collections.Generic.IList`1" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.Insert(System.Int32,Akomi.InformationModel.Component.Connection.ComponentPort)">
+            <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.Generic.IList`1" /> ein.</summary>
+            <param name="index">Der nullbasierte Index, an dem <paramref name="item" /> eingefügt werden soll.</param>
+            <param name="item">Das in die <see cref="T:System.Collections.Generic.IList`1" /> einzufügende Objekt.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.PortList.RemoveAt(System.Int32)">
+            <summary>Entfernt das <see cref="T:System.Collections.Generic.IList`1" />-Element am angegebenen Index.</summary>
+            <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.PortList.Item(System.Int32)">
+            <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+            <returns>Das Element am angegebenen Index.</returns>
+            <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die Eigenschaft wird festgelegt, und die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Mechanical.#ctor(System.String,System.String,System.Collections.Generic.List{Akomi.InformationModel.Component.ComponentPort.MechanicalFeature},System.String,System.String,System.String,System.Collections.Generic.List{Akomi.InformationModel.Component.Connection.MechanicalElectricalFeature})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="description"></param>
+            <param name="features"></param>
+            <param name="portType"></param>
+            <param name="portDirection"></param>
+            <param name="portStandard"></param>
+            <param name="feature"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Mechanical.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Mechanical.PortType">
+            <summary>
+            AnschlußTyp, Buchse->Female, Stecker->Male
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Mechanical.PortDirection">
+            <summary>
+            portDirection, two options: in, out, inout
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Mechanical.PortStandard">
+            <summary>
+            Anschlußmaß z.B. M8, RJ45
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Mechanical.SplitMechanicalPort(Akomi.InformationModel.Datatypes.ShapeValue)">
+            <summary>
+            Splitting a shape in MechanicalFeature
+            </summary>
+            <param name=""></param>
+            <returns></returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.MechanicalFeature.TangentialForce">
+            <summary>
+            Tangential Force
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.MechanicalFeature.NormalForce">
+            <summary>
+            Normal Force
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.MechanicalFeature.Geometry">
+            <summary>
+            Geometry of the Feature 
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Communication.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Communication.#ctor(Akomi.InformationModel.Datatypes.ExternalDataType,Akomi.InformationModel.Datatypes.ExternalDataType,System.String[])">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="protocol"></param>
+            <param name="parametrization"></param>
+            <param name="connectionPoints"></param>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Communication.ConnectionPoints">
+            <summary>
+                Software specific paths to locate the <see cref="N:Akomi.InformationModel.Component.ComponentPort" />s in the context of the system
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Communication.ProtocolType">
+            <summary>
+            Protocol like Profibus, Ethernet
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Communication.DeviceType">
+            <summary>
+            Defines whether port belongs to a Slave or Master Device
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.ComponentPort.Feature">
+            <summary>
+                Common description of a connection component (e.g. 1 wire of the electrical component of an connection)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Feature.#ctor(Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity,Akomi.InformationModel.Component.ComponentPort.FeatureType)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="standard"></param>
+            <param name="Value"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.ComponentPort.Feature.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ComponentPort.Feature.Range">
+            <summary>
+            Range can be declared separately from value;
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.ComponentPort.FeatureType">
+            <summary>
+            Feature Type for all port domains, for expamle ForceX,....Speed,Voltage,Current, Power)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.ChangeIndex.#ctor(System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="revisionIndex"></param>
+            <param name="versionNumber"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.ChangeIndex.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.CreationIndicator.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="identificationNumber"></param>
+            <param name="drawingNumber"></param>
+            <param name="referenceNumber"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.CreationIndicator.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.Documentation.#ctor">
+            <summary>
+                Constructor for serialization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Documentation.Documentation.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Akomi.InformationModel.Datatypes.ExternalDataType,System.String)">
+            <summary>
+                Default Constructor.
+            </summary>
+            <param name="location"></param>
+            <param name="dateOfIssue"></param>
+            <param name="author"></param>
+            <param name="title"></param>
+            <param name="accessLevel"></param>
+            <param name="status"></param>
+            <param name="type"></param>
+            <param name="language"></param>
+            <param name="file"></param>
+            <param name="pathToDynamicDoc"></param>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.Presentation.IPresentationData">
+            <summary>
+            Contains Data about how to Present a component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Presentation.IPresentationData.BrowseName">
+            <summary>
+                The Name, that is shown to the User
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Presentation.IPresentationData.Icon">
+            <summary>
+            Tiny icon for presentation purposes
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Presentation.IPresentationData.HmiImage">
+            <summary>Image of the device for HMI (e.g. Skills Modelling Tool)</summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.Presentation.HmiImage">
+            <summary>
+                Image of the device for HMI (e.g. Skills Modelling Tool)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Presentation.HmiImage.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Presentation.HmiImage.#ctor(Akomi.InformationModel.Datatypes.ExternalDataType)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Presentation.HmiImage.#ctor(System.String,System.String)">
+            <summary>
+                Constructor which consumes a filePath of an image and converts it into serialized data
+            </summary>
+            <param name="datatype"></param>
+            <param name="imagePath"></param>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.ManufacturingData.IManufacturingData">
+            <summary>
+            <see cref="T:Akomi.InformationModel.Component.ManufacturingData.IManufacturingData"/> contains information about where the componen comse from,
+            who is responsible for it, when was ist manufactured etc...
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ManufacturingData.IManufacturingData.ManufacturingDate">
+            <summary>
+            When has this component been built
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ManufacturingData.IManufacturingData.ManufacturerAddress">
+            <summary>
+            Where has this componen been manufactured
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.ManufacturingData.IManufacturingData.OriginalEquimentManufacturers">
+            <summary>
+            The OEMs who manufactured the used parts
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.Identification.IIdentification">
+            <summary>
+            <see cref="T:Akomi.InformationModel.Component.IComponent"/> is the fingerprint of a <see cref="T:Akomi.InformationModel.Component.Identification.IIdentification"/>
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.Guid">
+            <summary>
+                Use this property for comparing a unique device instance identifier of a real device
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.SerialNumber">
+            <summary>
+                Unique Number, that respresents one real Instance of a Real DeviceBase
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.VersionNumber">
+            <summary>
+                e.g. Hardware-Revision
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.Distributor">
+            <summary>
+               The company under which name the component is sold
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.ModelNumber">
+            <summary>
+                Unique Number, that represents an DeviceClass
+                Multiple Devices can have the same ModelNumber, if they are the same
+                DeviceBase Model
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.Identifier">
+            <summary>
+            Used to identify the real instance for a device.
+            Usually it is a combination of <see cref="P:Akomi.InformationModel.Component.Identification.IIdentification.ModelNumber"/> and <see cref="P:Akomi.InformationModel.Component.Identification.IIdentification.SerialNumber"/>
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.EnergyClass">
+            <summary>
+                e.g. A++
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.AdditionalIdentifier">
+            <summary>
+                Device Identifier like eClass-Group (e.g. LightBarrier), also own company specific identifier 
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.PhysicalAddress">
+            <summary>
+                MAC-address of the DeviceBase
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.IIdentification.IpAddress">
+            <summary>
+                Ip-Address of the DeviceBase. (Ethernet)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Identification.Identification.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.Identification.Identification.#ctor(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String,Akomi.InformationModel.Datatypes.ExternalDataType)">
+            <summary>
+                Default Constructor
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.Guid">
+            <summary>
+                Unique ID for this instance
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.Distributor">
+            <summary>
+             The marketing company distributing the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.ModelNumber">
+            <summary>
+                Unique Number, that represents an DeviceClass
+                Multiple Devices can have the same ModelNumber, if they are the same
+                DeviceBase Model
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.SerialNumber">
+            <summary>
+                Unique Number, that respresents one real Instance of a Real DeviceBase
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.VersionNumber">
+            <summary>
+                e.g. Hardware-Revision
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.EnergyClass">
+            <summary>
+                e.g. A++
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.PhysicalAddress">
+            <summary>
+                MAC-address of the DeviceBase
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.IpAddress">
+            <summary>
+                Ip-Address of the DeviceBase. (Ethernet)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.ClassName">
+            <summary>
+                Naming of a supergroup for this component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.Identification.Identification.Identifier">
+            <summary>
+                Returns the identification String containing model number and serial number
+            <returns>
+            If serial number or model number is empty, then null will be returned
+            </returns>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.TradingData.ITradingData">
+            <summary>
+            Contains data about all the trading of a component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.TradingData.ITradingData.VendorAddress">
+            <summary>
+            Where has this componen been selled
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Accuracy.#ctor(Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.PhysicalValue)">
+            <summary>
+                Standard Constructor
+            </summary>
+            <param name="standardAccuracy"></param>
+            <param name="repetionAccuracy"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Accuracy.#ctor">
+            <summary>
+                Constructor for Serialization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Axis.#ctor(System.String,Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity,Akomi.InformationModel.Component.PhysicalDescription.CartesianCoSy,System.Boolean)">
+            <summary>
+                Default Contructor
+            </summary>
+            <param name="type"></param>
+            <param name="rotationVelocity"></param>
+            <param name="rotationAcceleration"></param>
+            <param name="restriction"></param>
+            <param name="axisBasedCoSy"></param>
+            <param name="orientationAligned"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Axis.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.CartesianCoSy.#ctor(System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="unit"></param>
+            <param name="positionX"></param>
+            <param name="positionY"></param>
+            <param name="positionZ"></param>
+            <param name="rotationX"></param>
+            <param name="rotationY"></param>
+            <param name="rotationZ"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.DegreesOfFreedom.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="translation"></param>
+            <param name="rotation"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.DegreesOfFreedom.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.ExternalWeight.#ctor(Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.PhysicalValue)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="maxLoad"></param>
+            <param name="currentLoad"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.ExternalWeight.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.#ctor(Akomi.InformationModel.Datatypes.ShapeValue,System.Collections.Generic.List{Akomi.InformationModel.Component.PhysicalDescription.Point},Akomi.InformationModel.Component.PhysicalDescription.CartesianCoSy)">
+            <summary>
+                Default Constructor.
+            </summary>
+            <param name="exactVolume"></param>
+            <param name="basicGeometricVolume"></param>
+            <param name="referenceCoSy"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.BasicGeometricVolume">
+            <summary>
+                A simple volume characteristica of the workspace
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.Geometry">
+            <summary>
+                Represents the volumetric shape.
+                Containing data can either be point clouds, meshes, primitives, etc...
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.ExactVolume">
+            <summary>
+                Exact ExactVolume of the device (Point Array of occupied Points)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.ReferenceCoSy">
+            <summary>
+                Pose of the Coord.Sys. describing a geometric volume in relation to the original device CoSy (Pose)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension.Volume">
+            <summary>
+                Description of the exact geometry of the component with voxels.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.#ctor(Akomi.InformationModel.Component.PhysicalDescription.DegreesOfFreedom,System.Collections.Generic.List{Akomi.InformationModel.Component.PhysicalDescription.Axis},System.Collections.Generic.List{Akomi.InformationModel.Component.PhysicalDescription.Point},Akomi.InformationModel.Component.PhysicalDescription.CartesianCoSy)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="degreesOfFreedom"></param>
+            <param name="axesKinematics"></param>
+            <param name="path"></param>
+            <param name="tcpFrame"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.DegreesOfFreedom">
+            <summary>
+                Relative pose of the first axis (also later axes) in relation to the device coordinate system
+            </summary>
+            <summary>
+                DoF of a actuator. Zero for Sensors.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.AxesKinematics">
+            <summary>
+                Description of the axes of a device. Empty for sensors.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.Path">
+            <summary>
+                The trajectory on which a device is currently moving. Empty for sensors.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.Kinematics.TcpFrame">
+            <summary>
+                Current Frame (Pose) of the TCP of the device
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.PhysicalDescription.#ctor(Akomi.InformationModel.Datatypes.ExternalDataType,Akomi.InformationModel.Component.PhysicalDescription.GeometricDimension,System.Boolean,Akomi.InformationModel.Component.PhysicalDescription.Stress,Akomi.InformationModel.Component.PhysicalDescription.Kinematics,Akomi.InformationModel.Component.PhysicalDescription.Accuracy,Akomi.InformationModel.Component.PhysicalDescription.CartesianCoSy,System.Double,System.Double)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="cad"></param>
+            <param name="geometricDimension"></param>
+            <param name="moveability"></param>
+            <param name="accuracy"></param>
+            <param name="stress"></param>
+            <param name="kinematics"></param>
+            <param name="pose"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.PhysicalDescription.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.PhysicalDescription.IsMobile">
+            <summary>
+                Fixed, Moveable.  This is used to check in the PMT if a device is moveable
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.PhysicalDescription.EnergyClass">
+            <summary>
+                e.g. A++
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.PhysicalDescription.PhysicalDescription.Pose">
+            <summary>
+                Describes the position and orientation (frame) of a device inside a global factory coordinate system.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Point.#ctor(System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="id"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Stress.#ctor(Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Component.PhysicalDescription.ExternalWeight)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="selfWeight"></param>
+            <param name="externalWeight"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.PhysicalDescription.Stress.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Alarm.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="description"></param>
+            <param name="adjustmentHelp"></param>
+            <param name="type"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Alarm.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Consumption.#ctor(System.Collections.Generic.List{Akomi.InformationModel.Component.State.Substance},Akomi.InformationModel.Component.State.Substance,Akomi.InformationModel.Component.State.Substance)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="fluids"></param>
+            <param name="solid"></param>
+            <param name="energy"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Consumption.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.State.#ctor(System.String,Akomi.InformationModel.Enums.Status,Akomi.InformationModel.Component.State.Consumption,System.Collections.Generic.List{Akomi.InformationModel.Component.State.Alarm})">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="operationMode"></param>
+            <param name="operationalState"></param>
+            <param name="consumption"></param>
+            <param name="alarms"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.State.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.State.State.OperationalState">
+            <summary>
+                Use <see cref="T:Akomi.InformationModel.Enums.Status" /> enum and convert it with .ToString() for assignment e.g. OperationalState =
+                Status.NotConfigured.ToString();
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.State.State.OperationMode">
+            <summary>
+                e.g. automatic, manual
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Substance.#ctor(System.String,Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.PhysicalValue)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="type"></param>
+            <param name="total"></param>
+            <param name="currentFlowRate"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Component.State.Substance.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Component.IComponent">
+            <summary>
+                This is the main description for all components of a industrial context
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.Identification">
+            <summary>
+            Identification of the device (e.g. Serialnumber, Manufacturer) 
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.ManufacturingData">
+            <summary>
+            Information about the origin of the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.Documentation">
+            <summary>e.g. Handbooks</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.TradingData">
+            <summary>
+            Information about trading facts of the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.PresentationData">
+            <summary>
+            Contains Data about how to Present a component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.PhysicalDescription">
+            <summary>Physical Stuff of the device (e.g. position in room, dimensions, kinematics, weight)</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.Ports">
+            <summary>All external connections of the device (e.g. io-link, electrical stuff, network-standards)</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.Skills">
+            <summary>
+            List of all skills an <see cref="T:Akomi.InformationModel.Component.IComponent"/> has got
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Component.IComponent.State">
+            <summary>Current State of the <see cref="T:Akomi.InformationModel.Component.IComponent"/> (Operation Mode, Electrical consumption, alarms)</summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers">
+            <summary>
+            Collection of identifiers for unique identification of node in process
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.ProcessId">
+            <summary>
+            Id of process
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.UniqueSkillId">
+            <summary>
+            Unique Skill Id of the process skill node
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.NetworkElementId">
+            <summary>
+            Network Element Id of the node in the modelled process
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.MaterialPathId">
+            <summary>
+            Id of the material path, to whom the node belongs
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.AssignedDeviceModelNumber">
+            <summary>
+            Model number of the device assigned to the skill node
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.AssignedDeviceSerialNumber">
+            <summary>
+            Serial number of the device assigned to the skill node
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ProcessNodeIdentifiers.AssignedDeviceIdentifier">
+            <summary>
+            Identifier of the device assigned to the skill node (equal to ModelNumber + "_" + SerialNumber)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Min">
+            <summary>
+            lower bound for the range
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Max">
+            <summary>
+            upper bound for the range
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Average">
+            <summary>
+            average value between <see cref="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Min"/> and <see cref="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Max"/>
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.TargetValue">
+            <summary>
+            This is the value used by control systems.
+            In general, optimizers work on this value.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.Clone">
+            <summary>
+            Clones this object into a new instance (NOT DEEP!)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.GetHashCode">
+            <summary>
+            Custom hash code combines Min, Max and Unit
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity.ToString">
+            <summary>
+            Returns the interval-expression as string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.Voxel">
+            <summary>
+            AKOMI Voxel Type (Voxel with orientation vector)
+            <para>Position: Position of the voxel with x, y, z coordinates</para>
+            <para>Orientation: Angles alpha, beta, gamma for rotation of the direction vector (Euler Transformation, basis direction is x axis). If Orientation is (0, 0, 0), the direction vector is [(0, 0, 0), (1, 0, 0)]</para>
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.Voxel.ToString">
+            <summary>
+            Prints: Position (x, y, z), Orientation (alpha, beta, gamma), VoxelSize (x, y, z)
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.Voxel.Angle3D">
+            <summary>
+            Describes the Rotation of the basic direction vector (basic direction is x axis)
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.Voxel.VoxelSize">
+            <summary>
+            Describes the size of the voxel
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.Address">
+            <summary>
+            <example>
+            Name = "Motoman";    
+            Street = "Parkring"; 
+            StreetNumber = "4b"; 
+            PostalCode = "83221";
+            City = "Garching";   
+            State = "Bavaria";   
+            Country = "Munich";  
+            </example>
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.Address.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="street"></param>
+            <param name="streetNumber"></param>
+            <param name="postalCode"></param>
+            <param name="city"></param>
+            <param name="state"></param>
+            <param name="country"></param>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.ExternalDataType">
+            <summary>
+            ExternalDataType represents data located somewhere in the network or local on harddisc.
+            The data are not stored in the RAM.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.ExternalDataType.#ctor(System.String,System.Byte[])">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="datatype"></param>
+            <param name="data"></param>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ExternalDataType.Url">
+            <summary>
+            This is the url referencing the external resource
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ExternalDataType.Datatype">
+            <summary>
+            The datatype of the resource referenced by <see cref="P:Akomi.InformationModel.Datatypes.ExternalDataType.Url"/>
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.ExternalDataType.WriteToTemporaryFile">
+            <summary>
+            Returns the path of the temporary file
+            </summary>
+            <returns>path of the temporary file</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.ExternalDataType.WriteToFile(System.String)">
+            <summary>
+            Writes the bytes into the specified file
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.PhysicalValue.#ctor(System.String,System.String)">
+            <summary>
+                Default Constructor.
+            </summary>
+            <param name="value"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.PhysicalValue.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.PhysicalValue.Value">
+            <summary>
+                e.g. "50"
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.PhysicalValue.Unit">
+            <summary>
+                e.g. "mm"
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Datatypes.ShapeValue">
+            <summary>
+                Defines a Shape.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.ShapeValue.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Default Constructor.
+            </summary>
+            <param name="value"></param>
+            <param name="unit"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Datatypes.ShapeValue.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ShapeValue.Value">
+            <summary>
+                e.g. "r: 30; h: 50"
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ShapeValue.Unit">
+            <summary>
+                e.g. "mm"
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Datatypes.ShapeValue.Type">
+            <summary>
+                e.g. "Cylinder", "Sphere", "Cuboid", "Point", "Other"
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Description.IDeviceDescription.DeviceClassification">
+            <summary>
+                The associated field device class of the device.
+                Used to classify the device further.
+                Possible Types are Defined in <see cref="T:Akomi.InformationModel.Enums.DeviceType" />
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Description.IDeviceDescription.ClassName">
+            <summary>
+                Naming of a supergroup for this component. --> for Device Classification in PMT (e.g. LightBarrier)
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Description.DeviceClassification">
+            <summary>
+                Enum for device classification
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Device.Description.DeviceClassification.Primitive">
+            <summary>
+                Devices without any digital communication ability
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Device.Description.DeviceClassification.Basic">
+            <summary>
+                e.g. IO-Link Devices
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Device.Description.DeviceClassification.Standard">
+            <summary>
+                Ethernet devices
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Device.Description.DeviceClassification.Field">
+            <summary>
+                Real time ethernet devices, e.g. EtherCAT
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Device.Description.DeviceClassification.NextGeneration">
+            <summary>
+                Devices with high level communication abilities, e.g. PLCs
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.DeviceBase">
+            <summary>
+                Abstract Class of IDevice, which can be used to Initialized a default DeviceBase-Instance
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.#ctor">
+            <summary>
+                Default constructor for serialization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.CreateIDeviceMembers">
+            <summary>
+            Create instances for all members of the device
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.DeviceBase.Identification">
+            <summary>Identification of the device (e.g. Serialnumber, Manufacturer) </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.DeviceBase.Ports">
+            <summary>All external connections of the device (e.g. io-link, electrical stuff, network-standards)</summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.ForEach">
+            <summary>
+                Iterates through the device itself and all hierachical childs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.ForEach(System.Boolean)">
+            <summary>
+                Iterates through the device itself (if <paramref name="returnSelf" /> is true) and all hierachical childs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.ToString(System.Boolean)">
+            <summary>
+            </summary>
+            <param name="fullInformation">If true the device gives more informations than <see cref="M:Akomi.InformationModel.Device.DeviceBase.ToString" /> back</param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.AddAddtionalInformation(Akomi.InformationModel.Enums.InformationKey,System.String)">
+            <summary>
+                Sets a additional information in <see cref="T:Akomi.InformationModel.IInformationContainer" />
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.GetAdditionalInformation(Akomi.InformationModel.Enums.InformationKey)">
+            <summary>
+                Gets a additional information from <see cref="T:Akomi.InformationModel.IInformationContainer" />
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.DeviceBase.InformationContainer">
+            <summary>
+                Additional specific device information can be stored in this property.
+                It is recommende to use <see cref="T:Akomi.InformationModel.Enums.InformationKey" />
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.DeviceBase.ForEach(Akomi.InformationModel.Device.IDevice,System.Boolean)">
+            <summary>
+                Iterates through the device itself and all hierachical childs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.DataTypes">
+            <summary>
+                Enumeration for the possible DataTypes
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.DeviceParameter">
+            <summary>
+                Class for parametrization of a device.
+                Represents one parameter and holds informations about how to set it.
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.DeviceParameter.ParameterValueChangedHandler">
+            <summary>
+                delegate for parametrization
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.DeviceParameter.ParameterValueReadingHandler">
+            <summary>
+                delegate for parametrization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.#ctor(System.Boolean)">
+            <summary>
+            </summary>
+            <param name="initReadWrite">
+                Determines initial state <see cref="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.CanRead" /> and <see cref="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.CanWrite" /> values
+                If true, both values will be initialized with true, otherwise both will stay null
+            </param>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Id">
+            <summary>Id in the Parameterlist. Counts upwards.</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.NameId">
+            <summary>The universal name</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Name">
+            <summary>Name of the parameter</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.GroupName">
+            <summary>Name of the parameter group</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Value">
+            <summary>Value of the Parameter (as string). (e.g. 'True' or '0.454')</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.DefaultValue">
+            <summary>
+                The Default Value
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.ValueType">
+            <summary>DataType of the Value. Please use the <see cref="T:Akomi.InformationModel.Device.Parametrization.DataTypes" /> class with .toString() to write these values</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Description">
+            <summary>Description of the Parameter (for the user front end)</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.CanRead">
+            <summary>True if parameter can be read</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.CanWrite">
+            <summary>True if parameter can be written</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.SubIndex">
+            <summary>
+                Subindex value for communication
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Index">
+            <summary>
+                Index value for communication
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Access">
+            <summary>
+                Access informations (e.g. read, write)
+                todo: set CanRead and CanWrite on set
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.BitOffset">
+            <summary>
+                The bit offset for communication
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Length">
+            <summary>
+                The length of the BitArray in communication
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.DeviceParameter.GroupLength">
+            <summary>
+                Length of complete parameter group in bytes
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.SetValueWithoutEvents(System.String)">
+            <summary>
+                Set the value and avoid firing Events.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.GetValueWithoutEvents">
+            <summary>
+                Get the value and avoid firing Events.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Initialize">
+            <summary>
+                Initialized basic values
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.TryGetValue(System.String@)">
+            <summary>
+                Tries to read the value.
+            </summary>
+            <param name="value">TargetString for the read value</param>
+            <returns>true if read succeeded, false if an error occured</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.DeviceParameter.Equals(Akomi.InformationModel.Device.Parametrization.DeviceParameter)">
+            <summary>
+            compares 2 <see cref="T:Akomi.InformationModel.Device.Parametrization.DeviceParameter"/> for equality
+            </summary>
+            <param name="deviceParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.IParametrizationHandler">
+            <summary>
+                This interface is used for elements which are supposed to establish a parametrization responsibility chain
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.IParametrizationHandler.NextParametrizationHandler">
+            <summary>
+                The next handler in the chain of responsibility
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.IParametrizationHandler.ProgressReporter">
+            <summary>
+                This progress reporter uses <see cref="T:Akomi.InformationModel.Enums.ProgressStep" /> and <see cref="T:Akomi.InformationModel.Enums.ProgressState" />
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.IParametrizationHandler.WriteParameterValue(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueChangedEventArgs)">
+            <summary>
+                Method for writing changed parameter calues down to the device
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.IParametrizationHandler.ReadParameterValue(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueReadingEventArgs)">
+            <summary>
+                Method for reading requested parameter values directly from the device
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.Parametrization">
+            <summary>
+                Property to give access to every feature which has something to do with parametrization.
+                So this class contains all available parameters and the logic for parametrization.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.#ctor">
+            <summary>
+                Default constructor
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.#ctor(System.Collections.ObjectModel.ObservableCollection{Akomi.InformationModel.Device.Parametrization.DeviceParameter})">
+            <summary>
+                Constructor which takes parameter objects for initialization
+            </summary>
+            <param name="deviceParameters"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.#ctor(System.IProgress{System.Tuple{Akomi.InformationModel.Enums.ProgressStep,Akomi.InformationModel.Enums.ProgressState}})">
+            <summary>
+                Constructor which sets the progress reporter of the instance
+            </summary>
+            <param name="reporter"></param>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.Parametrization.DeviceParameters">
+            <summary>List of parameters that can be read or written on this device (e.g. distance trigger)</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Parametrization.Parametrization.WriteParameterAction">
+            <summary>
+                todo: comment
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.AddParameter(Akomi.InformationModel.Device.Parametrization.DeviceParameter)">
+            <summary>
+                Adds a new parameter to the parameter list.
+            </summary>
+            <param name="deviceParameter"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.RemoveParameter(Akomi.InformationModel.Device.Parametrization.DeviceParameter)">
+            <summary>
+                Entfernt das erste Vorkommen eines bestimmten Objekts aus <see cref="P:Akomi.InformationModel.Device.Parametrization.Parametrization.DeviceParameters" />.
+            </summary>
+            <param name="deviceParameter">
+                Das aus <see cref="P:Akomi.InformationModel.Device.Parametrization.Parametrization.DeviceParameters" /> zu entfernende Objekt.Der Wert kann für
+                Verweistypen null sein.
+            </param>
+            <returns>
+                true, wenn das item erfolgreich entfernt wurde, andernfalls false. Diese Methode gibt auch dann false zurück, wenn
+                das item nicht in <see cref="P:Akomi.InformationModel.Device.Parametrization.Parametrization.DeviceParameters" /> gefunden wurde.
+            </returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.Parametrization.Initialize">
+            <summary>
+                Initialization Method to establish the event system
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase">
+            <summary>
+                This abstract Base Handler is used to implement the chain of responsibility for parametrization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.WriteParameterValue(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueChangedEventArgs)">
+            <summary>
+                Resposible Method for invoking the Method Template <see cref="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.WriteParameterValueImplementation(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueChangedEventArgs)" />
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.ReadParameterValue(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueReadingEventArgs)">
+            <summary>
+                Resposible Method for invoking the Method Template <see cref="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.ReadParameterValueImplementation(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueReadingEventArgs)" />
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.ReadParameterValueImplementation(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueReadingEventArgs)">
+            <summary>
+                Template Method for implementing the concrete logic of reading parameters
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns>The current value of a parameter as string</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerBase.WriteParameterValueImplementation(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueChangedEventArgs)">
+            <summary>
+                Template Method for implementing the concrete logic of writing parameters
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns>True for a successful handled parametrization</returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerDefault">
+            <summary>
+                Empty Chain element.
+                Implementing this will take handling the event to the next chain element
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Parametrization.ParametrizationHandlerDefault.WriteParameterValueImplementation(Akomi.InformationModel.Device.Parametrization.DeviceParameter,Akomi.InformationModel.Device.Parametrization.ParameterValueChangedEventArgs)">
+            <summary>
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns>True if the parametrization was successful</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.ActivePassiveAppliance.#ctor(System.Collections.Generic.List{Akomi.InformationModel.Datatypes.PhysicalValue},System.Collections.Generic.List{Akomi.InformationModel.Datatypes.PhysicalValue})">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="active"></param>
+            <param name="passive"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.ActivePassiveAppliance.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Certificate.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="name"></param>
+            <param name="description"></param>
+            <param name="value"></param>
+            <param name="version"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Certificate.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.ChemicalWear.#ctor(System.Double,System.String,Akomi.InformationModel.Datatypes.PhysicalValue,Akomi.InformationModel.Datatypes.PhysicalValue)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="phValue"></param>
+            <param name="substanceComposition"></param>
+            <param name="area"></param>
+            <param name="duration"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.ChemicalWear.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Durability.#ctor(Akomi.InformationModel.Device.Safety.MechanicalWear,Akomi.InformationModel.Device.Safety.ChemicalWear)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="mechanical"></param>
+            <param name="chemical"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Durability.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.EnvironmentalConditions.#ctor(Akomi.InformationModel.Device.Safety.Sensibility,Akomi.InformationModel.Device.Safety.Durability)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="sensibility"></param>
+            <param name="durability"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.EnvironmentalConditions.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.MechanicalWear.#ctor(Akomi.InformationModel.Datatypes.ShapeValue,Akomi.InformationModel.Datatypes.ShapeValue)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="linearWear"></param>
+            <param name="volumetricWear"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.MechanicalWear.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.OperatingConditions.#ctor(Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity,Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity,Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity,Akomi.InformationModel.Datatypes.UniversalDynamicSet.Quantity)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="temperature"></param>
+            <param name="relativeHumidity"></param>
+            <param name="pressure"></param>
+            <param name="maxTraverseRate"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.OperatingConditions.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Safety.#ctor(System.String,Akomi.InformationModel.Device.Safety.EnvironmentalConditions,Akomi.InformationModel.Device.Safety.OperatingConditions,Akomi.InformationModel.Device.Safety.SafetyAppliances)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="ipCode"></param>
+            <param name="environmentalConditions"></param>
+            <param name="operatingConditions"></param>
+            <param name="safetyAppliances"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Safety.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.SafetyAppliances.#ctor(Akomi.InformationModel.Device.Safety.ActivePassiveAppliance,Akomi.InformationModel.Device.Safety.ActivePassiveAppliance)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="technical"></param>
+            <param name="constructional"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.SafetyAppliances.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Sensibility.#ctor(Akomi.InformationModel.Datatypes.ShapeValue)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="impactPressureSensivity"></param>
+            <param name="durability"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Safety.Sensibility.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Security.Authorization.#ctor(Akomi.InformationModel.Device.Security.User,System.String[])">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="userGroups"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Security.Authorization.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Security.User.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="username"></param>
+            <param name="accessLevel"></param>
+            <param name="authentification"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.Security.User.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.IDevice">
+            <summary>
+                Interface Class for all AKOMI Devices.
+                todo: SearchForSubDevices as Collection of Strategies
+                todo: IList -> ICollection
+                todo: Encapsulate Subdevices in order to add NewSubDeviceEvent
+                todo: Use Enums for several properties like datatype
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.IDevice.Description">
+            <summary>
+            Used to stored further informations about the device
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.IDevice.Safety">
+            <summary>(currently not important) e.g. SIL</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.IDevice.Security">
+            <summary>Authorization properties (e.g. user acces level, passwords)</summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.IDevice.Parametrization">
+            
+            <summary>
+            Property to give access to every feature which has something to do with parametrization.
+            todo: Replace with interface
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.IDevice.SubDevices">
+            <summary>List of subdevices</summary>
+            todo: Remove and look for subdevices over Ports
+        </member>
+        <member name="M:Akomi.InformationModel.Device.IDevice.ForEach">
+            <summary>
+                Iterates through all hierachical childs including itself
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.IDevice.ForEach(System.Boolean)">
+            <summary>
+                Iterates through all hierachical childs
+            </summary>
+            <paramref name="returnItself">If true, the enumeration includes the calling device</paramref>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Device.IDevice.ToString(System.Boolean)">
+            <summary>
+                Overrides <see cref="M:Akomi.InformationModel.Device.IDevice.ToString(System.Boolean)" /> with parameter, if more than just a short name identifiert will be returned.
+            </summary>
+            <param name="fullInformation">If true, most of the identification values will be returned</param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Logic.Logic">
+            <summary>
+                Class which contains additional logic informations e.g. code-templates in ST
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Logic.Logic.AdditionalInformation">
+            <summary>
+                The Name of the POU.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Logic.Logic.Implementation">
+            <summary>
+                Containing either path to skill-PLCOpenXML or XML serialize as a string
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Device.Logic.ILogicContainer">
+            <summary>
+                This interface is used for Objects, which can contain code snippets for the code generator
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Device.Logic.ILogicContainer.Logic">
+            <summary>
+                A container for code snippets.
+                The Logic code is used to program devices e.g. ST-Code for light barrier
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Enums.InformationKey">
+            <summary>
+                This enum defines common keys for additional information in <see cref="P:Akomi.InformationModel.IInformationContainer.InformationContainer" />
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.InformationKey.PlcProject">
+            <summary>
+                Used to save a serialized plc project
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.InformationKey.XmlDeviceInformation">
+            <summary>
+                Used to save xml information to a device
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.InformationKey.AmsNetId">
+            <summary>
+                This is the ams net id for Beckhoff specific communication buses
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.InformationKey.AmsPort">
+            <summary>
+                This is the ams port for Beckhoff specific communication buses
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.InformationKey.DevicePath">
+            <summary>
+                This string is can be used to store the path, to be able to navigate to 
+                the device.
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Enums.DeviceType">
+            <summary>
+                Values to specify the ClassName-Property of a device
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.DeviceType.Unknown">
+            <summary>
+                This value ist the Default one
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Enums.ProgressState">
+            <summary>
+                This Enumeration gives states for telling the user about the overall progresses
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressState.Outstanding">
+            <summary>
+                This state stands for tasks which have not been started yet.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressState.InProgress">
+            <summary>
+                This state stands for tasks which have already been started or recontinued.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressState.Finished">
+            <summary>
+                This state stands for tasks which have been finished.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressState.Failed">
+            <summary>
+                This state stands for tasks which have been failed.
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Enums.ProgressStep">
+            <summary>
+                This enum gives Types for describing single steps in commissionaing a industrial plant
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.NextGenerationScan">
+            <summary>
+                Searching and gathering information for the most complex group of devices.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.FieldScan">
+            <summary>
+                Searching and gathering field device informations.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.PrimitveScan">
+            <summary>
+                Searching and gathering information for the most primitive group of devices.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.BasicScan">
+            <summary>
+                Searching and gathering information for devices in the I/O-Layer of a industrial plant.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.StandardScan">
+            <summary>
+                Searching and gathering information for complex devices with non deterministic communication.
+                (e.g. HMI-Devices)
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.Publication">
+            <summary>
+                Publishing virtual plant informations. E.g. through a OPC UA Server
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.Parametrization">
+            <summary>
+                Parametrizing plant devices.
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.ProgressStep.Configuration">
+            <summary>
+                Downloading programcode onto Host-Devices, e.g. PLCs
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Enums.Status">
+            <summary>
+                The current Status of the <see cref="T:Akomi.InformationModel.Device.IDevice" /> or in derivations of <see cref="T:Akomi.InformationModel.Skills.OutputParamBase" />. This is for
+                use inside your implementation of a IDevice.
+                For the device status you have to convert this into a string e.g. DeviceStatus.Ready.ToString();
+                This is safer then directly using strings
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.NotConfigured">
+            Waiting for some user constraints
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Idle">
+            former Ready
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Running">
+            former Busy
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Complete">
+            Calculate has been finished
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Stopped">
+            Not needed yet
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Paused">
+            Not needed so far
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Error">
+            Some errors occured
+        </member>
+        <member name="F:Akomi.InformationModel.Enums.Status.Initializing">
+            State of going into initialized state
+        </member>
+        <member name="T:Akomi.InformationModel.ExtensionMethods.EnumerableExtensions">
+            <summary>
+            Extension Methods for Enumerables
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.ExtensionMethods.EnumerableExtensions.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Invokes an <see cref="T:System.Func`2"/> on each element of a <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+            <typeparam name="TIn"></typeparam>
+            <typeparam name="TOut"></typeparam>
+            <param name="enumerable"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.ExtensionMethods.EnumerationHelper">
+            <summary>
+                A Helper class for interaction with enumerations.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Akomi.InformationModel.ExtensionMethods.EnumerationHelper.GetAttributeOfType``1(System.Enum)" -->
+        <member name="M:Akomi.InformationModel.ExtensionMethods.EnumerationHelper.Description(System.Enum)">
+            <summary>
+                Returns the value of the <see cref="T:System.ComponentModel.DescriptionAttribute" /> of the enumValue.
+                If there is no <see cref="T:System.ComponentModel.DescriptionAttribute" /> <see cref="M:System.Enum.ToString" /> will be returned.
+            </summary>
+            <param name="enumVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.ExtensionMethods.StringExtensions.TryParseToImageFormat(System.String)">
+            <summary>
+                Tries to Parse an string as <see cref="T:System.Drawing.Imaging.ImageFormat" />.
+                If it fails null will be returned.
+            </summary>
+            <param name="sourceString">The string which should be parsed as <see cref="T:System.Drawing.Imaging.ImageFormat" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.ExtensionMethods.StringExtensions.ParseToImageFormat(System.String)">
+            <summary>
+                Tries to Parse an string as <see cref="T:System.Drawing.Imaging.ImageFormat" />.
+                If it fails null will be returned.
+            </summary>
+            <param name="sourceString">The string which should be parsed as <see cref="T:System.Drawing.Imaging.ImageFormat" /></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Product.ProductComponent">
+            <summary>
+            Component the product consits of
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductComponent.Material">
+            <summary>
+            material of the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductComponent.Roi">
+            <summary>
+            Current Roi on the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductComponent.Pose">
+            <summary>
+            Current pose of the component
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductComponent.ProcessNodeIdentifiers">
+            <summary>
+            Collection of identifiers for correlation of product component to node in process
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductBase.Components">
+            <summary>
+            List for the components the product consists of
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductBase.CurrentWeight">
+            <summary>
+            Current weight of the product
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Product.ProductBase.MassPoint">
+            <summary>
+            Current Masspoint of the product
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedDouble.#ctor(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="min">Min Value Boundary (required by the user)</param>
+            <param name="max">Max Value Boundary (required by the user). For Infinite set: -1</param>
+            <param name="value">Current Value (at runtime)</param>
+            <param name="unit">SI-Unit like "m/s", "km/h", "m/s^2"</param>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedDouble.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedInt.#ctor(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <param name="value"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedInt.#ctor">
+            <summary>
+                Constructor (for Serialization)
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedType`1.#ctor(`0,`0,`0,System.String)">
+            <summary>
+                Default Constructor
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <param name="value"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.RangedTypes.RangedType`1.#ctor">
+            <summary>
+                empty constructor
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.IPortList.Item(System.String)">
+            <summary>
+            Get Port by name
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.IInformationContainer">
+            <summary>
+                This interface defines data container for unspecified data
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.IInformationContainer.InformationContainer">
+            <summary>
+                Additional specific device information can be stored in this property.
+                It is recommende to use <see cref="T:Akomi.InformationModel.Enums.InformationKey" />
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.IInformationContainer.AddAddtionalInformation(Akomi.InformationModel.Enums.InformationKey,System.String)">
+            <summary>
+                Sets a additional information in <see cref="T:Akomi.InformationModel.IInformationContainer" />
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.IInformationContainer.GetAdditionalInformation(Akomi.InformationModel.Enums.InformationKey)">
+            <summary>
+                Gets a additional information from <see cref="T:Akomi.InformationModel.IInformationContainer" />
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Akomi.InformationModel.ISkillList.Contains(System.Type)">
+            <summary>List of skills that this device can perform</summary>
+        </member>
+        <member name="M:Akomi.InformationModel.ISkillList.GetSkill``1">
+            <summary>
+            Returns the first skill of type T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.ISkillList.GetSkills``1">
+            <summary>
+            Returns all the skills of type T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Roi.Line">
+            <summary>
+            Used to represent 1D Rois
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Roi.Point">
+            <summary>
+            Used to represent 0D Rois
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Roi.Surface">
+            <summary>
+            Used to Represent 2D Rois
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Roi.RegionOfInterest">
+            <summary>
+                Vector Class for Skill ROIs
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Roi.RegionOfInterest.#ctor">
+            <summary>
+                Parameterless constructor for serialization
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Roi.VectorVolume">
+            <summary>
+            Vector Volume for defining workarea and ROI  
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.Exceptions.IllegalStateException">
+            <summary>
+            This exception is thorn if a method call gets executed while the containing object's state is invalid
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkillGenericInOut">
+            <summary>
+            Generic Parameter Interface of a skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillGenericInOut.Parameters">
+            <summary>
+            A list of all parameters the instance contains
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.InputParamBase">
+            <summary>
+                Base Class of all input parameter classes of skills
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkill">
+            <summary>
+                Interactive and identificable skill interface.
+                This interface gives minimum requirements for implementing skills
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkill.Status">
+            <summary>
+            Current status of the skill.
+            This property can differ from the device status
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkill.Setup">
+            <summary>
+            Used to setup the device for proper execution of this skill
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkillIdentification">
+            <summary>
+                Interface for giving Skill-Identificaiton-Properties.
+                Used to be able to cast process skills and device skills to this type.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillIdentification.Name">
+            <summary>
+                Name of the Skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillIdentification.USID">
+            <summary>
+                Unique Skill ID
+                Leading Numbers: 
+                    - 10: Productive
+                    - 20: Transport
+                    - 30: Phantom
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillIdentification.SkillType">
+            <summary>
+                Use <see cref="T:Akomi.InformationModel.Skills.SkillType" /> definitions for this string
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.ISkillIdentification.EqualSkillDefinition(Akomi.InformationModel.Skills.ISkillIdentification)">
+            <summary>
+                Compares two skill definitions for semantic equality.
+                Most common is the comparison for <see cref="P:Akomi.InformationModel.Skills.ISkillIdentification.USID" /> and <see cref="P:Akomi.InformationModel.Skills.ISkillIdentification.Name" />
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkillParameterContainer`2">
+            <summary>
+                Defines the parameter interface of a skill
+            </summary>
+            <typeparam name="TInput"></typeparam>
+            <typeparam name="TOutput"></typeparam>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillParameterContainer`2.UserConstraints">
+            <summary>
+                Parameter with user constraints
+                Constraints are sent from the SMT to the device --> Input for device
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillParameterContainer`2.DeviceConstraints">
+            <summary>
+                Parameter with actual device constraints
+                These are the calculated values by the device --> Output of the device (not output of the skill!!)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillParameterContainer`2.DefaultDeviceValues">
+            <summary>
+                Default parameter calues
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillParameterContainer`2.OutputParam">
+            <summary>
+                Skill output container for holding the skill result
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkillStaticInOut">
+            <summary>
+            Defines the in and out parameters for a skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillStaticInOut.UserConstraints">
+            <summary>
+                Parameter with user constraints
+                Constraints are sent from the SMT to the device --> Input for device
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillStaticInOut.DeviceConstraints">
+            <summary>
+                Parameter with actual device constraints
+                These are the calculated values by the device --> Output of the device (not output of the skill!!)
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillStaticInOut.DefaultDeviceValues">
+            <summary>
+                Default parameter calues
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillStaticInOut.OutputParam">
+            <summary>
+                Skill output container for holding the skill result
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.ISkillStrategy">
+            <summary>
+                Defines all functionalities for interaction with a skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.ISkillStrategy.Context">
+            <summary>
+            This is the working context for the skill.
+            Mostly this is the Device which contains the skill-object.
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.ISkillStrategy.Calculate">
+            Takes the UserConstraints and calculates its own corresponding values and writes it in DeviceConstraints
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.ISkillStrategy.Execute">
+            Calls the real skill (e.g. Moves the robot)
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.ISkillStrategy.ExecuteAsync">
+            <summary>
+            Calls the Skill Asynchronously
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.ISkillStrategy.Reset">
+            Change the skill status from Complete to Idle and reset possible parameters
+        </member>
+        <member name="E:Akomi.InformationModel.Skills.ISkillStrategy.ExecutionStarted">
+            <summary>
+            todo: implement in child classes
+            </summary>
+        </member>
+        <member name="E:Akomi.InformationModel.Skills.ISkillStrategy.ExecutionFinished">
+            <summary>
+            todo: implement in child classes
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.OutputParamBase">
+            <summary>
+                Base Class of all output parameter classes of skills
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.OutputParamBase.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.OutputParamBase.Result">
+            <summary>
+            A Message about the finished Skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.OutputParamBase.Status">
+            <summary>
+                Mandatory. Use Status enum to handle the Stati and convert them to string for the assignment.
+                this property. e.g. Status = IAkomiDevice.Status.Busy.ToString();
+            </summary>
+            
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.OutputParamBase.OnPropertyChanged(System.String)">
+            <summary>
+            This Method invokes the handler, which shall handle changes of the properties.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SetupStrategy">
+            <summary>
+            This class is used to setup specific skills.
+            
+            e.g. Camera setup like focus and ISO can be adjusted with help of this class.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SetupStrategy.CurrentSetupStep">
+            <summary>
+                Shows the current Setup Information
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SetupStrategy.SetupId">
+            <summary>
+                Instance ID
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SetupStrategy.SetupNext">
+            Do next setup step (--> Internal counter displays new values after each execution)
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SetupStrategy.SetupBack">
+            Undo the last setup step
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SetupStrategy.SetupCancel">
+            Cancel the setup
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SetupStrategy.SetupCreateInstance">
+            Create instance of skill with unique instance ID (IID) and deviceName and do first setup step
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.Setup.HmiElement.#ctor">
+            <summary>
+                Default Contructor.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiElement.Value">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiElement.Index">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiElement.Name">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiElement.Description">
+            <summary>
+                Optional
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiElement.DataType">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.Setup.HmiPicture.#ctor">
+            <summary>
+                Default Contructor.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiPicture.Index">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiPicture.ImageData">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiPicture.Name">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiPicture.Description">
+            <summary>
+                Optional
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.Setup.HmiPicture.DataType">
+            <summary>
+                Mandatory
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.Setup.SetupStep">
+            <summary>
+                Describes a setup step for a device. Contains mostly visual elements which are shown on a GUI
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.Setup.SetupStep.#ctor">
+            <summary>
+                Parameterless constructor for serialization
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.Setup.SetupStep.#ctor(System.String)">
+            <summary>
+                Default Constructor.
+            </summary>
+            <param name="name">Name of the current Setup Step.</param>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillBase">
+            <summary>
+                Basic abstract class for all skills of the skill catalogue
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.#ctor(Akomi.InformationModel.Component.IComponent)">
+            <summary>
+                Empty constructor for instanziating Param-Objects
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Container">
+            <summary>
+                Container to get external Information into Skills
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Name">
+            <summary>
+                Name of the Skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.USID">
+            <summary>
+                Unique Skill ID
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.EqualSkillDefinition(Akomi.InformationModel.Skills.ISkillIdentification)">
+            <summary>
+                Compares two skill definitions for semantic equality.
+                Most common is the comparison for <see cref="P:Akomi.InformationModel.Skills.SkillBase.USID" /> and <see cref="P:Akomi.InformationModel.Skills.SkillBase.Name" />
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Status">
+            <summary>
+            Current status of the skill.
+            This property can differ from the device status
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Setup">
+            <summary>
+            Used to setup the device for proper execution of this skill
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.Calculate">
+            Takes the UserConstraints and calculates its own corresponding values and writes it in DeviceConstraints
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.Execute">
+            Calls the real skill (e.g. Moves the robot)
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.ExecuteAsync">
+            <summary>
+            Calls the Skill asynchronously
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.Reset">
+            Change the skill status from Complete to Idle and reset possible parameters
+        </member>
+        <member name="E:Akomi.InformationModel.Skills.SkillBase.ExecutionStarted">
+            <summary>
+            This event appears if the skill starts its execution.
+            </summary>
+        </member>
+        <member name="E:Akomi.InformationModel.Skills.SkillBase.ExecutionFinished">
+            <summary>
+            This Event is called if the skill finishes its execution
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.SkillType">
+            <summary>
+                This property gives information about the type of the Skill.
+                Types are defined in <see cref="P:Akomi.InformationModel.Skills.SkillBase.SkillType" />
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.Equals(Akomi.InformationModel.Skills.ISkill,Akomi.InformationModel.Skills.ISkill)">
+            <summary>
+                A container for code snippets.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Logic">
+            <summary>
+                A container for code snippets.
+                The Logic code is used to program devices e.g. ST-Code for light barrier
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillBase.Parameters">
+            <summary>
+            Containing all available parameters of the skill
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillBase.DefaultParameters">
+            <summary>
+            Can be used to instanziate the default parameters of the give skill type.
+            This method is overriden and skill specific parameters are created in the overriding method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillGenericInOutExtensions">
+            <summary>
+             Helper methods to extend the <see cref="T:Akomi.InformationModel.Skills.ISkillGenericInOut"/> interface
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,System.Type)">
+            <summary>
+            Searches and returns the given parameter type.
+            
+            </summary>
+            <param name="genericInOut"></param>
+            <param name="parameterType">The whole type. e.g SkillParameter{float} </param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,System.String)">
+            <summary>
+            Searches and returns a parameter with the given name
+            </summary>
+            <param name="genericInOut"></param>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName)">
+            <summary>
+            Searches and returns a parameter with the given name
+            </summary>
+            <param name="genericInOut"></param>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter``1(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName)">
+            <summary>
+            Searches and returns a parameter with the given name
+            </summary>
+            <param name="genericInOut"></param>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillHelper">
+            <summary>
+            This class is used to perform some great operations on skills and the complete skill catalogue
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Skills.SkillList.ThrowOnDuplicate">
+            <summary>
+            Adding duplicate skills will throw error if this is true
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.Skills">
+            <summary>List of skills that this device can perform</summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.GetSkill``1">
+            <summary>
+            Returns null if the specified skill could not be found.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.Akomi#InformationModel#ISkillList#Item(System.String)">
+            <summary>
+            </summary>
+            <param name="usid">The USID of the skill</param>
+            <returns>null if ISkill is not contained</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.GetEnumerator">
+            <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+            <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Gibt einen Enumerator zurück, der eine Auflistung durchläuft.</summary>
+            <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Add(Akomi.InformationModel.Skills.ISkill)">
+            <summary>Fügt der <see cref="T:System.Collections.Generic.ICollection`1" /> ein Element hinzu.</summary>
+            <param name="item">Das Objekt, das <see cref="T:System.Collections.Generic.ICollection`1" /> hinzugefügt werden soll.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Add(System.Object)">
+            <summary>Fügt der <see cref="T:System.Collections.IList" /> ein Element hinzu.</summary>
+            <returns>Die Position, an der das neue Element eingefügt wurde, oder -1, um anzugeben, dass das Element nicht in die Auflistung eingefügt wurde.</returns>
+            <param name="value">Das Objekt, das <see cref="T:System.Collections.IList" /> hinzugefügt werden soll.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Contains(System.Object)">
+            <summary>Bestimmt, ob die <see cref="T:System.Collections.IList" /> einen bestimmten Wert enthält.</summary>
+            <returns>true, wenn <see cref="T:System.Object" /> in <see cref="T:System.Collections.IList" /> gefunden wird, andernfalls false.</returns>
+            <param name="value">Das in der <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Clear">
+            <summary>Entfernt alle Elemente aus <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.IndexOf(System.Object)">
+            <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.IList" />.</summary>
+            <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+            <param name="value">Das in der <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Insert(System.Int32,System.Object)">
+            <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.IList" /> ein.</summary>
+            <param name="index">Der nullbasierte Index, an dem <paramref name="value" /> eingefügt werden soll.</param>
+            <param name="value">Das in die <see cref="T:System.Collections.IList" /> einzufügende Objekt.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+            <exception cref="T:System.NullReferenceException">
+            <paramref name="value" /> ist ein NULL-Verweis in <see cref="T:System.Collections.IList" />.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Remove(System.Object)">
+            <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus <see cref="T:System.Collections.IList" />.</summary>
+            <param name="value">Das aus der <see cref="T:System.Collections.IList" /> zu entfernende Objekt.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.IList" /> ist schreibgeschützt. - oder -  <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Contains(Akomi.InformationModel.Skills.ISkill)">
+            <summary>Ermittelt, ob die <see cref="T:System.Collections.Generic.ICollection`1" /> einen bestimmten Wert enthält.</summary>
+            <returns>true, wenn sich <paramref name="item" /> in <see cref="T:System.Collections.Generic.ICollection`1" /> befindet, andernfalls false.</returns>
+            <param name="item">Das im <see cref="T:System.Collections.Generic.ICollection`1" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.CopyTo(Akomi.InformationModel.Skills.ISkill[],System.Int32)">
+            <summary>Kopiert die Elemente von <see cref="T:System.Collections.Generic.ICollection`1" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+            <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.Generic.ICollection`1" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+            <param name="arrayIndex">Der nullbasierte Index in <paramref name="array" />, an dem das Kopieren beginnt.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array" /> ist null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex" /> ist kleiner als 0.</exception>
+            <exception cref="T:System.ArgumentException">Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.Generic.ICollection`1" /> ist größer als der verfügbare Platz von <paramref name="arrayIndex" /> bis zum Ende des Ziel-<paramref name="array" />.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Remove(Akomi.InformationModel.Skills.ISkill)">
+            <summary>Entfernt das erste Vorkommen eines angegebenen Objekts aus der <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <returns>true, wenn das <paramref name="item" /> erfolgreich aus der <see cref="T:System.Collections.Generic.ICollection`1" /> entfernt wurde, andernfalls false. Diese Methode gibt auch dann false zurück, wenn <paramref name="item" /> nicht in der ursprünglichen <see cref="T:System.Collections.Generic.ICollection`1" /> gefunden wurde.</returns>
+            <param name="item">Das aus dem <see cref="T:System.Collections.Generic.ICollection`1" /> zu entfernende Objekt.</param>
+            <exception cref="T:System.NotSupportedException">
+            <see cref="T:System.Collections.Generic.ICollection`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.CopyTo(System.Array,System.Int32)">
+            <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+            <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+            <param name="index">Der nullbasierte Index in <paramref name="array" />, an dem das Kopieren beginnt.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array" /> ist null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kleiner als 0.</exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="array" /> ist mehrdimensional. - oder -  Die Anzahl der Elemente in der Quelle <see cref="T:System.Collections.ICollection" /> ist größer als der verfügbare Speicherplatz ab <paramref name="index" /> bis zum Ende des <paramref name="array" />, das als Ziel festgelegt wurde. - oder - Der Typ der Quell-<see cref="T:System.Collections.ICollection" /> kann nicht automatisch in den Typ des Ziel-<paramref name="array" /> umgewandelt werden.</exception>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.Count">
+            <summary>Ruft die Anzahl der Elemente ab, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</summary>
+            <returns>Die Anzahl der Elemente, die in <see cref="T:System.Collections.Generic.ICollection`1" /> enthalten sind.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.SyncRoot">
+            <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+            <returns>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.IsSynchronized">
+            <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+            <returns>true, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls false.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.IsReadOnly">
+            <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+            <returns>true, wenn das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls false.</returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.IsFixedSize">
+            <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Collections.IList" /> eine feste Größe hat.</summary>
+            <returns>true, wenn <see cref="T:System.Collections.IList" /> eine feste Größe hat, andernfalls false.</returns>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.IndexOf(Akomi.InformationModel.Skills.ISkill)">
+            <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.Generic.IList`1" />.</summary>
+            <returns>Der Index von <paramref name="item" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+            <param name="item">Das im <see cref="T:System.Collections.Generic.IList`1" /> zu suchende Objekt.</param>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.Insert(System.Int32,Akomi.InformationModel.Skills.ISkill)">
+            <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.Generic.IList`1" /> ein.</summary>
+            <param name="index">Der nullbasierte Index, an dem <paramref name="item" /> eingefügt werden soll.</param>
+            <param name="item">Das in die <see cref="T:System.Collections.Generic.IList`1" /> einzufügende Objekt.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillList.RemoveAt(System.Int32)">
+            <summary>Entfernt das <see cref="T:System.Collections.Generic.IList`1" />-Element am angegebenen Index.</summary>
+            <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.System#Collections#IList#Item(System.Int32)">
+            <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+            <returns>Das Element am angegebenen Index.</returns>
+            <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die Eigenschaft wird festgelegt, und die <see cref="T:System.Collections.IList" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillList.Item(System.Int32)">
+            <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+            <returns>Das Element am angegebenen Index.</returns>
+            <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index" /> ist kein gültiger Index in der <see cref="T:System.Collections.Generic.IList`1" />.</exception>
+            <exception cref="T:System.NotSupportedException">Die Eigenschaft wird festgelegt, und die <see cref="T:System.Collections.Generic.IList`1" /> ist schreibgeschützt.</exception>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillParamBase">
+            <summary>
+            Base class for all skill parameters
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillParameter.Name">
+            <summary>
+            Predicts the name of this parameter.
+            This is important for semantic description of the parameter.
+            It defines based on the skillCatalogue convention, what the parameter is used for.
+            
+            Use <see cref="T:Akomi.InformationModel.Skills.SkillParameterName"/> for standard suggestions.
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillParameter.Direction">
+            <summary>
+            Tells about In- or Output Parameter
+            </summary>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillParameter.Role">
+            <summary>
+            Tells about the role this parameter plays during configuration or execution time
+            </summary>
+        </member>
+        <member name="M:Akomi.InformationModel.Skills.SkillParameter.ToString">
+            <summary>
+            Returns the parameter name if it is not empty
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Akomi.InformationModel.Skills.SkillParameter`1.Value">
+            <summary>
+            The Value of the parameter
+            This can be any type, eg. ROI, float, Geometry
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillType">
+            <summary>
+                This enum contains information about the Skill type.
+                It it used for distinguishing between transport and productive skill
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Skills.SkillType.Transport">
+            <summary>
+                Skills of this type change the position of products
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Skills.SkillType.Productive">
+            <summary>
+                Skills of this type fullfill productive steps on products
+            </summary>
+        </member>
+        <member name="F:Akomi.InformationModel.Skills.SkillType.Phantom">
+            <summary>
+                Phatom skills do not interact with any product.
+                They are needed for the functionality of other skill, e.g. ChangeToRunMode of PLC
+            </summary>
+        </member>
+    </members>
+</doc>

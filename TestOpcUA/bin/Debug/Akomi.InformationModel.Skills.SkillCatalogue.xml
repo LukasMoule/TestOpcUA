@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Akomi.InformationModel.Skills.SkillCatalogue</name>
+    </assembly>
+    <members>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillActivateConfigurationBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 HardwareMapping <para/>
+            	 Drivers <para/>
+            	 Skills <para/>
+            	 Process <para/>
+            	 Address <para/>
+            	 LocalData <para/>
+            Output Parameters: <para />
+            	 Result <para/>
+            	 GeneratedProject <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillDownloadConfigurationBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 IpAdress <para/>
+            	 Address <para/>
+            Output Parameters: <para />
+            	 Result <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillApplyElectrialContactBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 DegreesOfFreedom <para/>
+            	 Misalignment <para/>
+            	 OnOff <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillChangeOperationalModeBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 InitialMode <para/>
+            	 TargetMode <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillCheckBrightnessBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 Accuracy <para/>
+            	 TestConditionValue <para/>
+            	 TestTolerance <para/>
+            	 TestConditionRange <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillDetectIdBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 Accuracy <para/>
+            	 Duration <para/>
+            	 Unit <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillDetectTypeBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 Accuracy <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            	 Result <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillCheckPresenceBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Accuracy <para/>
+            	 Duration <para/>
+            	 Threshold <para/>
+            	 Result <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillExecuteCommandBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 ParameterName <para/>
+            	 Value <para/>
+            	 Mode <para/>
+            	 TargetObject <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillGetUserInputBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 InputType <para/>
+            	 Accuracy <para/>
+            	 Alpha <para/>
+            	 Duration <para/>
+            	 Result <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillHoldBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 DegreesOfFreedom <para/>
+            	 Misalignment <para/>
+            	 Duration <para/>
+            	 OnOff <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillMeasureColorBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 Accuracy <para/>
+            	 Spectrum <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 ResultRed <para/>
+            	 ResultGreen <para/>
+            	 ResultBlue <para/>
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillMeasureLengthBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest <para/>
+            	 Accuracy <para/>
+            	 ObjectGeometry <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillMeasureRotationBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Accuracy <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Result <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillMoveBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Path <para/>
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Progress <para/>
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillTransportBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Duration <para/>
+            	 Duration <para/>
+            	 TargetRegion <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Progress <para/>
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillRestartBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Duration <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillReadFromDatabaseBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Table <para/>
+            	 Key <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            	 Result <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillWriteToDatabaseBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Table <para/>
+            	 Key <para/>
+            	 Value <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillReadWriteDatabaseBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Table <para/>
+            	 SqlCommand <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            	 Result <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillSearchForSubdevicesBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Parent <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            	 SubDevices <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillShowBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Message <para/>
+            	 Image <para/>
+            	 OnOff <para/>
+            	 Duration <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillStoreToBufferBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillLoadFromBufferBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 Duration <para/>
+            	 Material <para/>
+            Output Parameters: <para />
+            	 Material <para/>
+            </summary>
+        </member>
+        <member name="T:Akomi.InformationModel.Skills.SkillCatalogue.SkillAssembleBase">
+            <summary>
+            Most parameter names should be contained in <see cref="!:Akomi.InformationModel.Skills.SkillParameterNames"/> <para/>
+            Input Parameters: <para />
+            	 RegionOfInterest1 <para/>
+            	 RegionOfInterest2 <para/>
+            	 AssemblyPos1 <para/>
+            	 AssemblyPos2 <para/>
+            	 BaseMaterial <para/>
+            	 AdditionalMaterial <para/>
+            Output Parameters: <para />
+            	 AssembledMaterial <para/>
+            </summary>
+        </member>
+    </members>
+</doc>
