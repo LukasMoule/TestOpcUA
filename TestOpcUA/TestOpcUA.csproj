@@ -34,16 +34,18 @@
   <ItemGroup>
     <Reference Include="3842522400, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Git\Akomi\Treiber\07_FTP-Server\Drivers\Dlls\3842522400.dll</HintPath>
+      <HintPath>G:\Akomi.Git\Akomi\Treiber\03_Realisierung\3842522400\obj\Debug\3842522400.dll</HintPath>
     </Reference>
     <Reference Include="Akomi.DynamicOpcUa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Akomi.DynamicOpcUa.1.0.0.67\lib\net45\Akomi.DynamicOpcUa.dll</HintPath>
     </Reference>
     <Reference Include="Akomi.InformationModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akomi.InformationModel.1.0.0.176\lib\net45\Akomi.InformationModel.dll</HintPath>
+      <HintPath>..\packages\Akomi.InformationModel.1.0.0.185\lib\net45\Akomi.InformationModel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Akomi.InformationModel.Skills.SkillCatalogue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akomi.InformationModel.Skills.SkillCatalogue.1.0.0.176\lib\net45\Akomi.InformationModel.Skills.SkillCatalogue.dll</HintPath>
+      <HintPath>..\packages\Akomi.InformationModel.Skills.SkillCatalogue.1.0.0.185\lib\net45\Akomi.InformationModel.Skills.SkillCatalogue.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Akomi.MathNet.Spatial, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Akomi.MathNet.Spatial.1.0.0.5\lib\net40\Akomi.MathNet.Spatial.dll</HintPath>
@@ -71,7 +73,7 @@
     </Reference>
     <Reference Include="MH5F, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Git\Akomi\Treiber\07_FTP-Server\Drivers\Dlls\MH5F.dll</HintPath>
+      <HintPath>G:\Akomi.Git\Akomi\Treiber\03_Realisierung\MH5F\obj\Debug\MH5F.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack.Core.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>

@@ -27,17 +27,18 @@ namespace TestOpcUA
             #endregion
 
             #region Device
-            IDevice robot = new DeviceBase();
-            IDeviceCompletement robotCompletement = new Mh5FCompletement();
-            robot = robotCompletement.CompleteDeviceDriver(ref robot);
-            robot.Identification.SerialNumber = "R145455863";
+            
 
             IDevice retainer = new DeviceBase();
             IDeviceCompletement retainerCompletement = new RetainingCylinder._384252240Completement();
             retainer = retainerCompletement.CompleteDeviceDriver(ref retainer);
             retainer.Identification.SerialNumber = "1";
             retainer.PresentationData.BrowseName = "Retainer";
-            
+            IDevice robot = new DeviceBase();
+            IDeviceCompletement robotCompletement = new Mh5FCompletement();
+            robot = robotCompletement.CompleteDeviceDriver(ref robot);
+            robot.Identification.SerialNumber = "R145455863";
+
             #endregion
 
             #region opc
