@@ -2446,37 +2446,31 @@
              Helper methods to extend the <see cref="T:Akomi.InformationModel.Skills.ISkillGenericInOut"/> interface
             </summary>
         </member>
-        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,System.Type)">
-            <summary>
-            Searches and returns the given parameter type.
-            
-            </summary>
-            <param name="genericInOut"></param>
-            <param name="parameterType">The whole type. e.g SkillParameter{float} </param>
-            <returns></returns>
-        </member>
-        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,System.String)">
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,System.String,Akomi.InformationModel.Skills.Direction)">
             <summary>
             Searches and returns a parameter with the given name
             </summary>
             <param name="genericInOut"></param>
             <param name="parameterName"></param>
+            <param name="direction"></param>
             <returns></returns>
         </member>
-        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName)">
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName,Akomi.InformationModel.Skills.Direction)">
             <summary>
             Searches and returns a parameter with the given name
             </summary>
             <param name="genericInOut"></param>
             <param name="parameterName"></param>
+            <param name="direction"></param>
             <returns></returns>
         </member>
-        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter``1(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName)">
+        <member name="M:Akomi.InformationModel.Skills.SkillGenericInOutExtensions.GetParameter``1(Akomi.InformationModel.Skills.ISkillGenericInOut,Akomi.InformationModel.Skills.SkillParameterName,Akomi.InformationModel.Skills.Direction)">
             <summary>
             Searches and returns a parameter with the given name
             </summary>
             <param name="genericInOut"></param>
             <param name="parameterName"></param>
+            <param name="direction"></param>
             <returns></returns>
         </member>
         <member name="T:Akomi.InformationModel.Skills.SkillHelper">

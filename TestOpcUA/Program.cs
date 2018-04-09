@@ -35,6 +35,8 @@ namespace TestOpcUA
             robot = robotCompletement.CompleteDeviceDriver(ref robot);
             robot.Identification.SerialNumber = "R145455863";
 
+            ((SkillParameter<CartesianCoSy>)robot.Skills.GetSkill<SkillMoveBase>().GetParameter("TargetPose", Direction.Input)).Value = new CartesianCoSy() { Unit = "mm" };
+
             IDevice retainer = new DeviceBase();
             IDeviceCompletement retainerCompletement = new RetainingCylinder._384252240Completement();
             retainer = retainerCompletement.CompleteDeviceDriver(ref retainer);
@@ -47,7 +49,7 @@ namespace TestOpcUA
             OpcUaServer server = new OpcUaServer();
             OpcUaStartupParameters opcUaParams = new OpcUaStartupParameters()
             { RootNodeName = robot.PresentationData.BrowseName,
-                IgnoreNullPointer = false
+                
             };
 
             OpcUaServer server2 = new OpcUaServer();

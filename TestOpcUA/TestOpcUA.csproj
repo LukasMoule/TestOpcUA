@@ -40,16 +40,16 @@
       <HintPath>..\packages\Akomi.DynamicOpcUa.1.0.0.67\lib\net45\Akomi.DynamicOpcUa.dll</HintPath>
     </Reference>
     <Reference Include="Akomi.InformationModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akomi.InformationModel.1.0.0.179\lib\net45\Akomi.InformationModel.dll</HintPath>
+      <HintPath>..\packages\Akomi.InformationModel.1.0.0.181\lib\net45\Akomi.InformationModel.dll</HintPath>
     </Reference>
     <Reference Include="Akomi.InformationModel.Skills.SkillCatalogue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akomi.InformationModel.Skills.SkillCatalogue.1.0.0.179\lib\net45\Akomi.InformationModel.Skills.SkillCatalogue.dll</HintPath>
+      <HintPath>..\packages\Akomi.InformationModel.Skills.SkillCatalogue.1.0.0.181\lib\net45\Akomi.InformationModel.Skills.SkillCatalogue.dll</HintPath>
     </Reference>
     <Reference Include="Akomi.MathNet.Spatial, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Akomi.MathNet.Spatial.1.0.0.5\lib\net40\Akomi.MathNet.Spatial.dll</HintPath>
     </Reference>
-    <Reference Include="Akomi.Utilities, Version=1.0.6662.16175, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akomi.Utilities.0.2.0.41\lib\net45\Akomi.Utilities.dll</HintPath>
+    <Reference Include="Akomi.Utilities, Version=1.0.6670.19607, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Akomi.Utilities.0.2.0.45\lib\net45\Akomi.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="AutoItX3.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a646454c8d475470, processorArchitecture=MSIL">
       <HintPath>..\packages\Akomi.DynamicOpcUa.1.0.0.67\lib\net45\AutoItX3.Assembly.dll</HintPath>
@@ -93,8 +93,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tapako.Framework, Version=1.0.6661.30103, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Tapako.Framework.1.0.0.57\lib\net45\Tapako.Framework.dll</HintPath>
+    <Reference Include="Tapako.Framework, Version=1.0.6671.14612, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tapako.Framework.1.0.0.62\lib\net45\Tapako.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Tapako.ObjectMerger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Tapako.ObjectMerger.0.5.0.15\lib\net45\Tapako.ObjectMerger.dll</HintPath>
