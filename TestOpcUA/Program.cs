@@ -12,6 +12,9 @@ using MH5F;
 using Rexroth_3842999898;
 using Akomi.InformationModel.Component.Connection;
 using RetainingCylinder;
+using Akomi.InformationModel.Skills;
+using Akomi.InformationModel.Component;
+using Akomi.InformationModel.Component.PhysicalDescription;
 
 namespace TestOpcUA
 {
@@ -29,6 +32,8 @@ namespace TestOpcUA
             #region Device
             
 
+            ((SkillParameter<CartesianCoSy>)robot.Skills.GetSkill<SkillMoveBase>().GetParameter("TargetPose", Direction.Input)).Value = new CartesianCoSy() { Unit = "mm" };
+
             IDevice retainer = new DeviceBase();
             IDeviceCompletement retainerCompletement = new RetainingCylinder._384252240Completement();
             retainer = retainerCompletement.CompleteDeviceDriver(ref retainer);
@@ -44,16 +49,19 @@ namespace TestOpcUA
             #region opc
             OpcUaServer server = new OpcUaServer();
             OpcUaStartupParameters opcUaParams = new OpcUaStartupParameters()
-            { RootNodeName = robot.PresentationData.BrowseName
+            { RootNodeName = robot.PresentationData.BrowseName,
+                
             };
 
             OpcUaServer server2 = new OpcUaServer();
             OpcUaStartupParameters opcUaParams2 = new OpcUaStartupParameters()
             {
-                RootNodeName = retainer.PresentationData.BrowseName
+                RootNodeName = retainer.PresentationData.BrowseName,
+                IgnoreNullPointer=false
             };
-
-
+            var physDescr = new PhysicalDescription() { Pose = new CartesianCoSy() };
+            ((SkillParameter<IComponent>)retainer.Skills.FirstOrDefault().Parameters.First(x => x.Name == "Material" && x.Direction == Direction.Input)).Value = new Akomi.InformationModel.Product.ProductBase() { PhysicalDescription = physDescr };
+            ((SkillParameter<IComponent>)robot.Skills.FirstOrDefault().Parameters.First(x => x.Name == "Material" && x.Direction == Direction.Input)).Value = new Akomi.InformationModel.Product.ProductBase() { PhysicalDescription = physDescr };
             //opcUaParams.CurrentDepth = 0;
             //opcUaParams.MaximumDepth = 3000;
 
